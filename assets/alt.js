@@ -28,24 +28,12 @@
   function save(s) {
     try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
   }
-  function readRungs() {
-    try { return JSON.parse(localStorage.getItem("vc26.rungs")) || {}; }
-    catch (e) { return {}; }
-  }
-  function writeRungs(r) {
-    try { localStorage.setItem("vc26.rungs", JSON.stringify(r)); } catch (e) {}
-  }
 
   // ?fresh=1 — one link a helper can hand a student stranded on a shared laptop.
   // Strip it from the URL afterwards, or every later reload silently wipes the
   // work done since, which is the opposite of what the student wants.
   if (/[?&]fresh/.test(location.search)) {
     try { localStorage.removeItem(KEY); } catch (e) {}
-    if (TRACK.rung) {
-      var fresh = readRungs();
-      delete fresh[TRACK.rung];
-      writeRungs(fresh);
-    }
     try {
       var q = location.search.replace(/[?&]fresh(=[^&]*)?/g, "").replace(/^&/, "?");
       history.replaceState(null, "", location.pathname + q + location.hash);
@@ -373,12 +361,6 @@
     if (doneScreen) doneScreen.classList.add("is-active");
     state.done = true;
     save(state);
-    if (TRACK.rung) {
-      var rungs = readRungs();
-      rungs[TRACK.rung] = true;
-      writeRungs(rungs);
-      paintRungs();
-    }
     paintIndex();
     setHash("#done");
     toTop(!reduce);
@@ -521,11 +503,6 @@
       reset.addEventListener("click", function () {
         if (!confirm("Clear the ticks and progress saved on this page in this browser?")) return;
         try { localStorage.removeItem(KEY); } catch (e) {}
-        if (TRACK.rung) {
-          var rungs = readRungs();
-          delete rungs[TRACK.rung];      // else the ladder stays lit forever
-          writeRungs(rungs);
-        }
         state = { checks: {} };
         allChecks().forEach(function (c) { c.checked = false; });
         go(0);
@@ -557,13 +534,6 @@
     });
   }
 
-  function paintRungs() {
-    var rungs = readRungs();
-    Array.prototype.forEach.call(document.querySelectorAll("[data-rung]"), function (el) {
-      el.classList.toggle("rung--lit", !!rungs[el.getAttribute("data-rung")]);
-    });
-  }
-
   function paintHubStatus() {
     Array.prototype.forEach.call(
       document.querySelectorAll("[data-track-status]"), function (el) {
@@ -576,7 +546,6 @@
           el.textContent = "In progress";
         }
       });
-    paintRungs();
   }
 
   /* ------------------------------------------------------------------ boot */

@@ -476,23 +476,24 @@ After approval: create or replace index.html in this folder. Tell me when it's w
 <!-- ====================================================== DONE -->
 <section class="done">
   <span class="done__num dots" data-num="04"></span>
-  <h1 class="done__t">Rung two. You built something.</h1>
+  <h1 class="done__t">You built something.</h1>
   <p class="done__p">You turned a vague intention into a written brief, approved it, watched a
     file appear on your own disk, and steered it with specific corrections. That loop —
     observe, describe, change, check — is the entire job.</p>
+  <p class="done__p">Which rung was that? Rung 2 as you ran it — it proposed, you approved
+    each edit. Switch to Accept edits and the same job is rung 3: the only thing that changed
+    is a permission.</p>
   <p class="done__p">Next: the same loop, pointed at something that
     exercises judgment instead of following instructions.</p>
 
-  <div class="ladder">
-    <div class="rung rung--lit"><div class="rung__n">1</div>
-      <div class="rung__slab">Describe</div><div class="rung__c">ask for an answer</div></div>
-    <div class="rung" data-rung="build"><div class="rung__n">2</div>
-      <div class="rung__slab">Build</div><div class="rung__c">one file, yours</div></div>
-    <div class="rung rung--now"><div class="rung__n">3</div>
-      <div class="rung__slab">Advise</div><div class="rung__c">up next</div></div>
-    <div class="rung rung--next"><div class="rung__n">4</div>
-      <div class="rung__slab">Connect</div><div class="rung__c">next session</div></div>
+  <div class="rungs" role="img" aria-label="The agency ladder, rungs 1 to 5">
+    <span class="rungs__dot rung--1">1</span>
+    <span class="rungs__dot rung--2 is-lit">2</span>
+    <span class="rungs__dot rung--3 is-open">3</span>
+    <span class="rungs__dot rung--4">4</span>
+    <span class="rungs__dot rung--5">5</span>
   </div>
+  <p class="rungs__c">Rung 2 as you ran it — or 3, in Accept edits</p>
 
   <div class="nav">
     <a class="btn btn--red" href="advisor.html">Build your advisor</a>
@@ -510,7 +511,7 @@ After approval: create or replace index.html in this folder. Tell me when it's w
   <button class="btn-reset">Start over</button>
 </footer>
 
-<script>window.TRACK = { id: "warmup", rung: "build",
+<script>window.TRACK = { id: "warmup",
   hintTail: " — tick them as you go" };</script>
 <script src="assets/alt.js"></script>
 <script>if(!window.__ALT_OK)document.documentElement.className=document.documentElement.className.replace(/(^|\s)js(\s|$)/," ")</script>

@@ -688,24 +688,25 @@ One short block per question.</p>
 <!-- ====================================================== DONE -->
 <section class="done">
   <span class="done__num dots" data-num="05"></span>
-  <h1 class="done__t">Rung three. And you know its limits.</h1>
+  <h1 class="done__t">It works. What rung is it at?</h1>
   <p class="done__p">You built an agent that works across a folder of evidence, grounded it in
     official sources, taught it your priorities, wrote its rules down where you can inspect
     them, and then went looking for where it breaks. The last part is the part most people
     skip.</p>
+  <p class="done__p">Built at rung 2 — you approved each file. Used at rung 1 — it answers,
+    you decide. Moving it up is next session's question: a semester plan checked against the
+    packet would be rung 3; calendar and email under rules you write, rung 4.</p>
   <p class="done__p"><b>Bring both folders back next session.</b> They're the starting point for
     publishing, connecting, and making this reusable.</p>
 
-  <div class="ladder">
-    <div class="rung rung--lit"><div class="rung__n">1</div>
-      <div class="rung__slab">Describe</div><div class="rung__c">ask for an answer</div></div>
-    <div class="rung" data-rung="build"><div class="rung__n">2</div>
-      <div class="rung__slab">Build</div><div class="rung__c">one file, yours</div></div>
-    <div class="rung rung--now"><div class="rung__n">3</div>
-      <div class="rung__slab">Advise</div><div class="rung__c">a folder of evidence</div></div>
-    <div class="rung rung--next"><div class="rung__n">4</div>
-      <div class="rung__slab">Connect</div><div class="rung__c">next session</div></div>
+  <div class="rungs" role="img" aria-label="The agency ladder, rungs 1 to 5">
+    <span class="rungs__dot rung--1 is-lit">1</span>
+    <span class="rungs__dot rung--2 is-lit">2</span>
+    <span class="rungs__dot rung--3 is-open">3</span>
+    <span class="rungs__dot rung--4 is-open">4</span>
+    <span class="rungs__dot rung--5">5</span>
   </div>
+  <p class="rungs__c">Built at rung 2, used at rung 1 — next: what would 3 and 4 need?</p>
 
   <div class="dashed" style="max-width:52ch;margin-left:0">
     <b>Two questions left open</b>
@@ -731,7 +732,7 @@ One short block per question.</p>
   <button class="btn-reset">Start over</button>
 </footer>
 
-<script>window.TRACK = { id: "advisor", rung: "advise",
+<script>window.TRACK = { id: "advisor",
   hintTail: " — tick them as you go" };</script>
 <script src="assets/alt.js"></script>
 <script>if(!window.__ALT_OK)document.documentElement.className=document.documentElement.className.replace(/(^|\s)js(\s|$)/," ")</script>

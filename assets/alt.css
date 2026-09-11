@@ -769,28 +769,67 @@ details.help > summary:focus-visible { outline-offset: -2px; }
 }
 .done__p { max-width: 58ch; font-size: 17px; margin: 0 0 16px; }
 
-/* the agency ladder as a measured diagram */
-.ladder { display: grid; grid-template-columns: repeat(4, 1fr); margin: 52px 0 44px; }
-.rung { padding: 14px 18px 0 0; border-top: 2px solid var(--cloud); }
-.rung__n { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; color: var(--cloud); }
-.rung__slab {
+/* the agency ladder — the deck's five heat-coloured rungs, the one place the
+   palette opens beyond the eight (mirrors slide 16 and the divider marks) */
+.ladder, .rungs {
+  --r1: #6AA2B8; --r2: #00698E; --r3: #006B67; --r4: #ED7700; --r5: #A31F34;
+}
+.rung--1 { --rc: var(--r1); }
+.rung--2 { --rc: var(--r2); }
+.rung--3 { --rc: var(--r3); }
+.rung--4 { --rc: var(--r4); }
+.rung--5 { --rc: var(--r5); }
+.ladder { list-style: none; margin: 40px 0 22px; padding: 0; }
+.rung {
+  display: grid;
+  grid-template-columns: 40px 150px 1fr;
+  gap: 0 18px;
+  align-items: center;
+  padding: 11px 0;
+  border-top: 1px solid var(--hair);
+}
+.rung:last-child { border-bottom: 1px solid var(--hair); }
+.rung__n {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--rc);
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 16px;
+  color: #fff;
+}
+.rung__u {
+  font-family: var(--display);
+  font-size: 13px;
   letter-spacing: .13em;
   text-transform: uppercase;
-  color: var(--cloud);
-  margin: 7px 0 6px;
+  color: var(--rc);
 }
-.rung__c { font-size: 13px; color: var(--cloud); line-height: 1.45; }
-.rung--lit { border-top-color: var(--ink); }
-.rung--lit .rung__n { color: var(--silver); }
-.rung--lit .rung__slab { color: var(--ink); }
-.rung--lit .rung__c { color: var(--ink); }
-.rung--now { border-top-color: var(--red); }
-.rung--now .rung__n,
-.rung--now .rung__slab { color: var(--red); }
-.rung--now .rung__c { color: var(--ink); }
-.rung--next { border-top-style: dashed; }
+.rung__c { font-size: 15px; font-style: italic; color: var(--ink); line-height: 1.4; }
+
+/* the small strip on a completion screen: lit = where the exercise sat, dashed =
+   the rung in question or next session's */
+.rungs { display: flex; gap: 8px; margin: 40px 0 10px; }
+.rungs__dot {
+  width: 30px; height: 30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--panel);
+  font-family: var(--display);
+  font-size: 12px;
+  color: var(--silver);
+}
+.rungs__dot.is-lit { background: var(--rc); color: #fff; }
+.rungs__dot.is-open { background: transparent; border: 1.5px dashed var(--cloud); }
+.rungs__c {
+  margin: 0 0 40px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
 
 .motto {
   font-family: var(--display);
@@ -917,7 +956,9 @@ a.entry:hover .entry__t { color: var(--red); }
   .step__body { margin-left: 0; }
   .mode { grid-template-columns: 1fr; gap: 4px; }
   .mode__f { grid-column: 1; justify-self: start; }
-  .ladder { grid-template-columns: repeat(2, 1fr); gap: 26px 0; }
+  .rung { grid-template-columns: 34px 1fr; gap: 2px 14px; }
+  .rung__n { width: 34px; height: 34px; font-size: 14px; grid-row: span 2; }
+  .rung__c { grid-column: 2; }
   .entry { grid-template-columns: 34px 1fr; gap: 10px 16px; }
   .entry__d, .entry__s { grid-column: 2; }
   .beat { padding: 26px 24px; }
