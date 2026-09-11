@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Set up your machine · Vibe Coding</title>
+<meta name="description" content="Install Claude Desktop, create your workshop folders, and prove it works.">
+<link rel="stylesheet" href="assets/alt.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<script>document.documentElement.className+=" js"</script>
+</head>
+<body>
+
+<div class="intro">
+  <div class="intro__sweep"></div>
+  <div class="intro__inner">
+    <p class="intro__eyebrow label">Chapter 3 · Section 03</p>
+    <span class="intro__num dots" data-num="03"></span>
+    <h1 class="intro__title"><span>Set up</span><span>your machine</span></h1>
+    <div class="intro__rule"></div>
+    <p class="intro__meta label">Four steps · about twenty minutes</p>
+    <div class="intro__go"><button class="btn">Begin</button></div>
+  </div>
+  <button class="intro__skip">Skip</button>
+</div>
+
+<aside class="rail">
+  <a href="index.html" style="line-height:0">
+    <img class="rail__tag" src="assets/tag.png"
+         alt="AI Foundations"></a>
+  <a class="rail__chapter" href="index.html">
+    <span class="label">Chapter 3</span>
+    <span class="rail__chapter-t">Vibe Coding</span></a>
+  <!-- the collapsed bar under 1080px names the page instead -->
+  <p class="rail__sec label">Section 03</p>
+  <p class="rail__track">Set up <br>your machine</p>
+
+  <p class="rail__now"></p>
+
+  <nav class="rail__nav" aria-label="Guides">
+    <ul class="rail__guides">
+      <li class="rail__guide is-current" data-guide="setup">
+        <a class="rail__g" href="setup.html" aria-current="page"><span class="rail__n">03</span><span class="rail__gl">Set up your machine</span></a>
+        <ul class="rail__index"></ul>
+      </li>
+      <li class="rail__guide" data-guide="warmup">
+        <a class="rail__g" href="warmup.html"><span class="rail__n">04</span><span class="rail__gl">Build your page</span></a>
+      </li>
+      <li class="rail__guide" data-guide="advisor">
+        <a class="rail__g" href="advisor.html"><span class="rail__n">05</span><span class="rail__gl">Build your MBA advisor</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="rail__foot">
+    <p class="rail__stuck">Stuck? Raise your hand.</p>
+    <div class="meter" role="progressbar" aria-label="Progress"
+         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="meter__fill"></div></div>
+    <div class="rail__read">
+      <span data-read-step>STEP 3.0</span><span data-read-pct>0%</span>
+    </div>
+  </div>
+</aside>
+
+<main class="sheet">
+<div class="col">
+
+<!-- ====================================================== 0 · PREFLIGHT -->
+<section class="step" data-rail="Before you begin">
+  <div class="step__head">
+    <div></div>
+    <div>
+      <p class="step__eyebrow label">Before you begin</p>
+      <h1 class="step__title">Five things to check<br>before we start</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">Twenty minutes for all four steps. Thirty seconds now saves ten
+      minutes later — tick what's true, the page remembers. If you're still installing when the
+      room moves on, stop and pair with a neighbour: you'll do every exercise from their screen
+      and finish your own install afterwards.</p>
+
+    <h2 class="sec">Check</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="pre-admin"><span class="check__box"></span>
+        <span class="check__t">I can install software on this laptop
+          <small>A personally managed Mac or PC, not a locked corporate machine. Can't tick this
+            one? You'll pair with a neighbour today — raise your hand now, so we can seat you next
+            to someone before the room starts.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="pre-login"><span class="check__box"></span>
+        <span class="check__t">I know my MIT Claude login
+          <small>The same one you used in Chapter 1. If you've forgotten it, reset it now rather than at step 1.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="pre-power"><span class="check__box"></span>
+        <span class="check__t">I'm on wifi, and plugged in or well charged
+          <small>Sixty people downloading at once is the slowest minute of the day. Plug in.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="pre-space"><span class="check__box"></span>
+        <span class="check__t">My laptop isn't low on storage
+          <small>The installer is small, but a full disk fails in confusing ways. If your laptop
+            has been warning you about storage, clear some space now.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="pre-focus"><span class="check__box"></span>
+        <span class="check__t">Slack, email, and notifications are closed
+          <small>You'll be reading carefully and typing exactly. Close the noise.</small></span>
+      </label></li>
+    </ul>
+
+    <div class="note note--warn"><b>On Windows?</b> Claude Code needs Git installed. You'll be
+      prompted during step 1 or the first time you use Code — say yes, and take the default
+      options. If you can install it before class, do.</div>
+
+    <div class="nav">
+      <button class="btn" data-next>Start setup</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 1 · INSTALL -->
+<section class="step" data-rail="Install Claude Desktop">
+  <div class="step__head">
+    <span class="step__num dots" data-num="3.1"></span>
+    <div>
+      <p class="step__eyebrow label">Setup 1 of 4</p>
+      <h1 class="step__title">Install Claude Desktop</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">One installer. The clicking takes a minute; the download takes as long
+      as it takes, because sixty laptops are pulling the same file. You're installing the Claude
+      desktop app; Claude Code is a tab inside it, and that tab is what can read and write files
+      in a folder you choose. We're using the app rather than the command line so your attention
+      stays on directing Claude.</p>
+
+    <h2 class="sec">Do this</h2>
+    <ol class="dos">
+      <li><b>Download the Claude desktop app for macOS or Windows</b>
+        <small>From <a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a> — take the version your laptop offers.</small></li>
+      <li><b>Run the installer and open the app</b>
+        <small>Accept the defaults. On a Mac you may need to drag it to Applications.</small></li>
+      <li><b>Sign in with your MIT Claude account</b>
+        <small>The login you used in Chapter 1 — not a personal account you may also have.</small></li>
+      <li><b>On Windows: install Git if prompted</b>
+        <small>Claude Code needs it. Take the default options in that installer too.</small></li>
+    </ol>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="s1-installed"><span class="check__box"></span>
+        <span class="check__t">Claude opens on my laptop as an app, not a browser tab</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="s1-signed"><span class="check__box"></span>
+        <span class="check__t">I'm signed in with my MIT account, not a personal one</span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>My download is crawling, or it stopped</summary>
+      <div class="help__b">
+        <p>Expected — sixty laptops are pulling the same file. Give it two minutes. If it hasn't
+          moved, cancel and restart the download once; a stalled transfer rarely recovers on its
+          own.</p>
+        <p>If the second attempt stalls too, raise your hand and pair with a neighbour now rather
+          than at step 3 — you can install at home tonight and lose nothing today.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>The installer won't run, or my Mac says it's from an unidentified developer</summary>
+      <div class="help__b">
+        <p>On macOS: open <b>System Settings → Privacy &amp; Security</b>, scroll to the bottom,
+          and choose <b>Open Anyway</b> next to the blocked app. Then launch it again.</p>
+        <p>On Windows: if SmartScreen appears, choose <b>More info → Run anyway</b>.</p>
+        <p>If your laptop is managed by an employer and blocks both, raise your hand — pair with
+          a neighbour for today and install at home.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>My sign-in fails — and how long to spend on it</summary>
+      <div class="help__b">
+        <p>Sign out completely, then sign back in choosing the MIT option rather than an email
+          and password you may have used personally. If your browser auto-fills a personal
+          account, open a private window for the login step.</p>
+        <p>Still stuck? Raise your hand. Do not spend more than two minutes here — a helper can
+          usually fix this in thirty seconds.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Windows: what exactly is Git, and do I have to understand it?</summary>
+      <div class="help__b">
+        <p>No. It's a piece of plumbing Claude Code uses to keep track of file changes on
+          Windows. Install it, take the defaults, and forget about it. We're not teaching Git
+          today — that's next session's material.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>Next</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 2 · FOLDER -->
+<section class="step" data-rail="Create a workshop folder">
+  <div class="step__head">
+    <span class="step__num dots" data-num="3.2"></span>
+    <div>
+      <p class="step__eyebrow label">Setup 2 of 4</p>
+      <h1 class="step__title">Create a workshop folder</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">The folder is the boundary — the agent works inside it and nowhere
+      else. Choosing it is a permissions decision, so choose it deliberately.</p>
+
+    <div class="tree">
+      <div class="d">Documents/ <span class="note">anywhere you can find again is fine</span></div>
+      <div><span class="i">└─ </span><span class="d">vibe-coding-workshop/</span> <span class="note">everything for today</span></div>
+      <div><span class="i">&nbsp;&nbsp;&nbsp;├─ </span><span class="d">personal-site/</span> <span class="note">the warm-up</span></div>
+      <div><span class="i">&nbsp;&nbsp;&nbsp;└─ </span><span class="d">mba-advisor/</span> <span class="note">the main exercise</span></div>
+    </div>
+
+    <h2 class="sec">Do this</h2>
+    <ol class="dos">
+      <li><b>Open Finder (Mac) or File Explorer (Windows)</b>
+        <small>Go to Documents, or anywhere you'll be able to find again.</small></li>
+      <li><b>Make a folder called <code class="m">vibe-coding-workshop</code></b>
+        <small>Lower case, hyphens, no spaces. It'll save you typing later.</small></li>
+      <li><b>Inside it, make two more: <code class="m">personal-site</code> and <code class="m">mba-advisor</code></b>
+        <small>Two rooms on purpose: the page never sees the advisor's files.</small></li>
+    </ol>
+
+    <div class="note"><b>Why two folders?</b> Whatever folder you open is what Claude can read
+      and write. Keeping the exercises apart means a mistake in one can't touch the other — and
+      it makes the boundary visible instead of theoretical.</div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="s2-tree"><span class="check__box"></span>
+        <span class="check__t">All three folders exist, nested as shown above</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="s2-find"><span class="check__box"></span>
+        <span class="check__t">I can say where the folder is out loud — for example,
+          Documents → vibe-coding-workshop</span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>Should I put this in OneDrive, iCloud, or Dropbox?</summary>
+      <div class="help__b">
+        <p>A synced Documents folder is fine and is what most of you already have. Just avoid
+          putting it somewhere that syncs <i>aggressively</i> while you work — if you see files
+          reappearing or locking, move the folder to your desktop instead.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Can I put it on my Desktop, or somewhere else entirely?</summary>
+      <div class="help__b">
+        <p>Yes. Anywhere you can navigate to confidently. Avoid hidden or system directories,
+          and avoid anything with your employer's name on it.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Does the name actually matter?</summary>
+      <div class="help__b">
+        <p>Not to the software — but lower case with hyphens and no spaces is the convention
+          you'll see everywhere in this world, and it avoids a class of small annoyances. Copy
+          the names above and you'll match the rest of the room.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>Next</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 3 · OPEN -->
+<section class="step" data-rail="Open the folder in Code">
+  <div class="step__head">
+    <span class="step__num dots" data-num="3.3"></span>
+    <div>
+      <p class="step__eyebrow label">Setup 3 of 4</p>
+      <h1 class="step__title">Open the folder in Code</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">This is where you hand Claude a workspace and decide how much it may
+      do on its own. The mode you set in a moment is the permissions layer from Chapter 1, made
+      concrete.</p>
+
+    <h2 class="sec">Do this</h2>
+    <ol class="dos">
+      <li><b>In Claude, open the Code tab</b>
+        <small>Look for <i>Code</i> in the sidebar or top navigation. If you can't see it after
+          thirty seconds, raise your hand. This is the one step where hunting alone costs you the
+          exercise.</small></li>
+      <li><b>Choose to open a project folder</b>
+        <small>Claude will ask you to pick a folder from your computer.</small></li>
+      <li><b>Select the folder you made for the warm-up</b>
+        <small>It's called <code class="m">personal-site</code> if you used our name. Whatever you
+          called it, pick that one — not all of Documents.</small></li>
+      <li><b>Set the permission mode to Manual</b>
+        <small>Look for the mode control near where you type. Choose the option that asks you
+          before each edit — if the wording on your screen differs from ours, that is the one you
+          want. Can't find it in thirty seconds? Raise your hand.</small></li>
+    </ol>
+
+    <h2 class="sec">What the modes mean</h2>
+    <div class="modes">
+      <div class="mode"><span class="mode__n">Plan</span>
+        <span class="mode__d">It thinks it through and proposes an approach. No files change.</span></div>
+      <div class="mode"><span class="mode__n">Manual</span>
+        <span class="mode__d">It proposes; you approve each edit before it happens.</span>
+        <span class="mode__f">Choose this</span></div>
+      <div class="mode"><span class="mode__n">Accept edits</span>
+        <span class="mode__d">It edits freely; you review afterwards. Use it once you've earned trust.</span></div>
+    </div>
+
+    <div class="note"><b>This is the shield from Chapter 1.</b> Permissions are what the system
+      may do without asking. Start narrow and widen deliberately — that habit is worth more than
+      any keyboard shortcut you'll learn today.</div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="s3-open"><span class="check__box"></span>
+        <span class="check__t">Claude Code is open on the <code class="m">personal-site</code> folder</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="s3-mode"><span class="check__box"></span>
+        <span class="check__t">The mode is set to the one that asks before each edit (Manual)</span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>I can't find the Code tab — and how long to spend on it</summary>
+      <div class="help__b">
+        <p>Thirty seconds of looking, then stop. Hunting for a tab is the most expensive way there
+          is to lose this exercise.</p>
+        <p>Raise your hand, and sit with a neighbour rather than waiting; you can catch the
+          install up afterwards.</p>
+        <p>While you wait: quit the app completely, reopen it, and check you're signed in to your
+          MIT account — Code isn't available to every account type.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Windows: it's asking me to install Git</summary>
+      <div class="help__b">
+        <p>Say yes and take the defaults — this is the Git install the preflight mentioned,
+          arriving now rather than at step 1. Give it a couple of minutes and don't cancel it
+          partway.</p>
+        <p>If it's still going when the room moves on, raise your hand and pair with a neighbour —
+          you can finish your own install afterwards.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I opened the wrong folder</summary>
+      <div class="help__b">
+        <p>No harm done — nothing has changed on your disk yet. Close the project and open the
+          right one. If you opened something large like your whole home directory, definitely
+          switch: a big folder makes Claude slower and vaguer, and it widens what it can touch.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It's asking for permission to access Documents or Desktop</summary>
+      <div class="help__b">
+        <p>That's your operating system, not Claude, and it's the right question to be asked.
+          Allow it for the folder you chose. On macOS these live in <b>System Settings → Privacy
+          &amp; Security → Files and Folders</b> if you need to change your answer later.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I can't get this working at all</summary>
+      <div class="help__b">
+        <p>Sit with a neighbour now. You'll do every exercise today from their screen — watching
+          someone direct the agent is most of the lesson.</p>
+        <p>Tick nothing, and come back to this page tonight: the guide will still be here and the
+          folders take four minutes.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>Next</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 4 · PROVE -->
+<section class="step" data-rail="Prove that it works">
+  <div class="step__head">
+    <span class="step__num dots" data-num="3.4"></span>
+    <div>
+      <p class="step__eyebrow label">Setup 4 of 4</p>
+      <h1 class="step__title">Prove that it works</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">One small, unambiguous success before anything that matters.
+      If you're stuck here, raise your hand rather than re-reading.</p>
+
+    <p>Copy the prompt below, replace <b>YOUR NAME</b> with your actual name, then paste it into
+      the box where you type in the Code tab — with <code class="m">personal-site</code> open —
+      and press Enter.</p>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Hello prompt · replace YOUR NAME</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Create one file named index.html. Make it display "Hello, YOUR NAME" in large text on a clean white page. Do not create any other files.</p>
+    </div>
+
+    <p>Approve the edit when Claude asks — that's Manual mode doing its job.</p>
+
+    <h2 class="sec">Done when — all three</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="s4-file"><span class="check__box"></span>
+        <span class="check__t"><code class="m">index.html</code> appears in the <code class="m">personal-site</code> folder</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="s4-opens"><span class="check__box"></span>
+        <span class="check__t">It opens in my browser
+          <small>Double-click the file, or drag it onto a browser window.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="s4-name"><span class="check__box"></span>
+        <span class="check__t">I can see my own name on the page</span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>My page says YOUR NAME instead of my name</summary>
+      <div class="help__b">
+        <p>One line fixes it: tell Claude <i>"My name is Alex, update index.html to use it."</i>
+          Nothing is broken.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Nothing happened, or I can't find the file</summary>
+      <div class="help__b">
+        <p>Check the folder in Finder or File Explorer rather than trusting the chat. If it
+          isn't there, ask Claude directly: <i>"Which folder are you working in, and what files
+          are in it?"</i> That one question resolves most of these.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>The file opens in a text editor instead of a browser</summary>
+      <div class="help__b">
+        <p>Right-click it and choose <b>Open With → Chrome / Safari / Edge</b>. You're seeing
+          the file's source, which means it exists and everything worked — it just opened in the
+          wrong application.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>My folder shows index, not index.html</summary>
+      <div class="help__b">
+        <p>That's Windows and macOS hiding the extension. The file is right. If you want to see
+          extensions: <b>View → Show → File name extensions</b> on Windows, or <b>Finder →
+          Settings → Advanced</b> on Mac — but you don't need to.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I said no when it asked permission</summary>
+      <div class="help__b">
+        <p>Sensible instinct, and the mode is doing its job. Just ask again: <i>"Go ahead and
+          create index.html"</i> — then approve it this time. Nothing was written, so nothing is
+          broken.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It made several files, or put things somewhere unexpected</summary>
+      <div class="help__b">
+        <p>Say so plainly: <i>"You created extra files. Delete everything except index.html and
+          show me what's left."</i> Steering after the fact is the normal working mode, not a
+          failure — and it's the skill the rest of the session is about.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It's asking me questions instead of building</summary>
+      <div class="help__b">
+        <p>Answer briefly and let it proceed. If it's over-thinking a four-word page, say
+          <i>"Keep it simple — one file, one line of text."</i></p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I've tried everything and no file appears</summary>
+      <div class="help__b">
+        <p>Sit with a neighbour now. You'll do every exercise today from their screen — watching
+          someone direct the agent is most of the lesson.</p>
+        <p>Leave the last three boxes unticked and come back tonight: Claude is installed and your
+          folders exist, so you'd be picking up at this step rather than at the beginning.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn btn--red" data-next>I'm set up</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== DONE -->
+<section class="done">
+  <span class="done__num dots" data-num="03"></span>
+  <h1 class="done__t">Your machine is a workshop now</h1>
+  <p class="done__p">You installed an agent, gave it a folder, set what it may do without
+    asking, and watched it write a real file to your disk. That's the whole harness — context,
+    tools, permissions, and you closing the loop.</p>
+  <p class="done__p">Keep Claude open. The warm-up starts in the
+    same folder.</p>
+  <p class="done__p">Back before class? Take thirty seconds on the preflight — power, wifi,
+    notifications closed — and check you're still signed in to your MIT account.</p>
+  <div class="ladder">
+    <div class="rung rung--lit"><div class="rung__n">1</div>
+      <div class="rung__slab">Describe</div><div class="rung__c">ask for an answer</div></div>
+    <div class="rung rung--now"><div class="rung__n">2</div>
+      <div class="rung__slab">Build</div><div class="rung__c">you're here</div></div>
+    <div class="rung"><div class="rung__n">3</div>
+      <div class="rung__slab">Advise</div><div class="rung__c">later today</div></div>
+    <div class="rung rung--next"><div class="rung__n">4</div>
+      <div class="rung__slab">Connect</div><div class="rung__c">next session</div></div>
+  </div>
+
+  <div class="nav">
+    <a class="btn btn--red" href="warmup.html">Go to the warm-up</a>
+    <button class="btn btn--ghost" data-restart>Run the preflight</button>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="colophon">
+  <a href="index.html">All guides</a>
+  <span class="colophon__spacer"></span>
+  <span>Progress is saved in this browser only — not your account. Not your laptop? Start over first.</span>
+  <button class="btn-reset">Start over</button>
+</footer>
+
+<script>window.TRACK = { id: "setup", rung: null,
+  hintTail: " — these gate the rest of today" };</script>
+<script src="assets/alt.js"></script>
+<script>if(!window.__ALT_OK)document.documentElement.className=document.documentElement.className.replace(/(^|\s)js(\s|$)/," ")</script>
+</body>
+</html>

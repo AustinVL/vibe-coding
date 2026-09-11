@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build your MBA advisor · Vibe Coding</title>
+<meta name="description" content="A workspace that knows the packet, learns your goals, and shows its sources.">
+<link rel="stylesheet" href="assets/alt.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<script>document.documentElement.className+=" js"</script>
+</head>
+<body>
+
+<div class="intro">
+  <div class="intro__sweep"></div>
+  <div class="intro__inner">
+    <p class="intro__eyebrow label">Chapter 3 · Section 05 · On the clock</p>
+    <span class="intro__num dots" data-num="05"></span>
+    <h1 class="intro__title"><span>Build your</span><span>MBA advisor</span></h1>
+    <div class="intro__rule"></div>
+    <p class="intro__meta label">It knows the packet · it learns your goals · it shows its sources</p>
+    <div class="intro__go"><button class="btn">Begin</button></div>
+  </div>
+  <button class="intro__skip">Skip</button>
+</div>
+
+<aside class="rail">
+  <a href="index.html" style="line-height:0">
+    <img class="rail__tag" src="assets/tag.png"
+         alt="AI Foundations"></a>
+  <a class="rail__chapter" href="index.html">
+    <span class="label">Chapter 3</span>
+    <span class="rail__chapter-t">Vibe Coding</span></a>
+  <!-- the collapsed bar under 1080px names the page instead -->
+  <p class="rail__sec label">Section 05</p>
+  <p class="rail__track">Build your <br>MBA advisor</p>
+
+  <p class="rail__now"></p>
+
+  <nav class="rail__nav" aria-label="Guides">
+    <ul class="rail__guides">
+      <li class="rail__guide" data-guide="setup">
+        <a class="rail__g" href="setup.html"><span class="rail__n">03</span><span class="rail__gl">Set up your machine</span></a>
+      </li>
+      <li class="rail__guide" data-guide="warmup">
+        <a class="rail__g" href="warmup.html"><span class="rail__n">04</span><span class="rail__gl">Build your page</span></a>
+      </li>
+      <li class="rail__guide is-current" data-guide="advisor">
+        <a class="rail__g" href="advisor.html" aria-current="page"><span class="rail__n">05</span><span class="rail__gl">Build your MBA advisor</span></a>
+        <ul class="rail__index"></ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="rail__foot">
+    <p class="rail__stuck">Stuck? Raise your hand.</p>
+    <div class="meter" role="progressbar" aria-label="Progress"
+         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="meter__fill"></div></div>
+    <div class="rail__read">
+      <span data-read-step>STEP 5.0</span><span data-read-pct>0%</span>
+    </div>
+  </div>
+</aside>
+
+<main class="sheet">
+<div class="col">
+
+<!-- ====================================================== 0 · PREFLIGHT -->
+<section class="step" data-rail="Before you begin">
+  <div class="step__head">
+    <div></div>
+    <div>
+      <p class="step__eyebrow label">Before you begin</p>
+      <h1 class="step__title">This one has<br>more ways to be wrong</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">The page followed instructions. An advisor exercises judgment — it
+      reads sources, weighs your priorities, and gives a different answer to every person in
+      this room. More agency, more usefulness, more ways to go wrong.</p>
+
+    <h2 class="sec">Check</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="a-folder"><span class="check__box"></span>
+        <span class="check__t">Claude Code is open on <code class="m">mba-advisor</code>
+          <small>A different folder from the warm-up, on purpose — switch to it the way you opened <code class="m">personal-site</code>. Didn't make it in setup? Make an empty folder called <code class="m">mba-advisor</code> now, wherever <code class="m">personal-site</code> lives — that's all it is. This one is a workspace you'll bring back next session.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a-packet"><span class="check__box"></span>
+        <span class="check__t">I've downloaded the orientation packet
+          <small>Link below. Download it before class — step 1 shows you how to unzip it and where to put it.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a-privacy"><span class="check__box"></span>
+        <span class="check__t">I know what I'm not going to type into this
+          <small>Nothing financial, medical, immigration-related, or otherwise sensitive. It lives in a folder on your laptop.</small></span>
+      </label></li>
+    </ul>
+
+    <div class="dashed">
+      <b>Orientation packet</b>
+      &lt;packet name and download link — to be added&gt;<br>
+      &lt;plus a line reading "Download before class — it's about N MB." — to be added&gt;
+    </div>
+
+    <div class="note note--warn"><b>Read this once.</b> What you build today is useful, not
+      authoritative. It cannot change Sloan policy, and it does not replace academic, career,
+      financial, legal, or accessibility staff. Treat it as a very well-read study partner.</div>
+
+    <div class="note"><b>Thirty-two minutes on the clock.</b> Steps 1 to 4 build the advisor;
+      step 5 is where you find out what you built. Protect the last third.</div>
+
+    <h2 class="sec">Pace yourself against the clock</h2>
+    <p>Time left on the room timer — the countdown on the screen at the front.</p>
+    <div class="modes">
+      <div class="mode"><span class="mode__n">26:00 left</span>
+        <span class="mode__d">The packet folder is inside <code class="m">mba-advisor</code> and Claude can see it.</span></div>
+      <div class="mode"><span class="mode__n">20:00 left</span>
+        <span class="mode__d"><code class="m">source-map.md</code> lists every supplied file.</span></div>
+      <div class="mode"><span class="mode__n">14:00 left</span>
+        <span class="mode__d"><code class="m">my-profile.md</code> is corrected and <code class="m">advisor-start.md</code> is saved.</span></div>
+      <div class="mode"><span class="mode__n">9:00 left</span>
+        <span class="mode__d">The advisor is running and you've asked one real question you care about.</span></div>
+      <div class="mode"><span class="mode__n">5:00 left</span>
+        <span class="mode__d">You've asked the impossible question.</span>
+        <span class="mode__f">The point</span></div>
+    </div>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>The download is slow, stalled, or blocked</summary>
+      <div class="help__b">
+        <p>Don't sit and watch a progress bar. Pair with a neighbour who already has it and copy
+          the folder across — a memory stick, AirDrop, or a shared folder all work.</p>
+        <p>A helper can also hand you the packet on a USB stick. Ask for one rather than
+          retrying the download.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn" data-next>Start</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 1 · INVENTORY -->
+<section class="step" data-rail="Inventory the packet">
+  <div class="step__head">
+    <span class="step__num dots" data-num="5.1"></span>
+    <div>
+      <p class="step__eyebrow label">Step 1 of 5</p>
+      <h1 class="step__title">Inventory the packet</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">Ground it in authoritative material before you personalize anything.
+      You're building a map of what the advisor is allowed to treat as fact.</p>
+
+    <h2 class="sec">What you're building</h2>
+    <div class="tree">
+      <div class="d">mba-advisor/ <span class="note">the workspace — bring it back next session</span></div>
+      <div><span class="i">├─ </span><span class="d">orientation-materials/</span> <span class="note">official source files, as supplied</span></div>
+      <div><span class="i">├─ </span><span class="f">source-map.md</span> <span class="note">what each source contains, when to use it</span></div>
+      <div><span class="i">├─ </span><span class="f">my-profile.md</span> <span class="note">your goals, constraints, tradeoffs</span></div>
+      <div><span class="i">├─ </span><span class="f">advisor-start.md</span> <span class="note">the rules that start the advisor</span></div>
+      <div><span class="i">└─ </span><span class="f">test-log.md</span> <span class="note">what worked, failed, and changed</span></div>
+    </div>
+
+    <h2 class="sec">Do this</h2>
+    <ol class="dos">
+      <li><b>Open <code class="m">mba-advisor</code> in Claude Code</b>
+        <small>Same three moves as setup: open the Code tab, choose to open a project folder, and pick <code class="m">mba-advisor</code> — it's beside <code class="m">personal-site</code>. Your warm-up page is untouched; you can switch back the same way.</small></li>
+      <li><b>Put the packet folder inside it</b>
+        <small>Windows: right-click the .zip, choose <b>Extract All</b>, then Extract — don't drag files out of the preview window. Mac: double-click it. Then drag the <code class="m">orientation-materials</code> folder into <code class="m">mba-advisor</code>. If it lands under a different name, rename it to <code class="m">orientation-materials</code>.</small></li>
+      <li><b>Ask Claude to inventory every file</b>
+        <small>It will ask before writing anything — that's Manual mode from setup. Approve it.</small></li>
+      <li><b>Ask it to write <code class="m">source-map.md</code></b>
+        <small>Filename, topic, and when that source is useful.</small></li>
+    </ol>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Inventory prompt</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">List every file in this project folder, including files inside subfolders.
+
+Then write source-map.md. For each file give: the filename, what it covers, and when it would be the right source to consult.
+
+Do not summarize the contents in detail yet, and do not include any file you could not actually open — list those separately as unreadable.</p>
+    </div>
+
+    <div class="note"><b>Quality check:</b> every file in the packet should appear in
+      <code class="m">source-map.md</code> — either as a mapped entry or in the unreadable list.
+      <b>Count both.</b> Open <code class="m">orientation-materials</code> in Finder or File
+      Explorer and count what's there, including anything inside subfolders. A map that quietly
+      skips three documents is worse than no map, because you'll trust it.</div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="a1-placed"><span class="check__box"></span>
+        <span class="check__t">The packet folder is inside <code class="m">mba-advisor</code></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a1-map"><span class="check__box"></span>
+        <span class="check__t"><code class="m">source-map.md</code> exists and I've read it
+          <small>To read it, just ask: <i>"Show me source-map.md."</i> You never need to open an editor.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a1-count"><span class="check__box"></span>
+        <span class="check__t">I counted: every supplied file appears in the map — mapped, or listed as unreadable</span>
+      </label></li>
+    </ul>
+
+    <div class="note note--warn"><b>Two minutes, then raise your hand.</b> Show us the screen
+      rather than starting over — a stuck session is the most useful thing you can show a
+      helper.</div>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>I can see the files but Claude can't</summary>
+      <div class="help__b">
+        <p>Almost always the zip. On Windows, double-clicking a .zip opens a preview window that
+          looks exactly like a folder — files dragged out of it one at a time land somewhere you
+          didn't choose, and the folder Claude is looking at stays empty. Extract the archive
+          properly, then move the whole extracted folder into <code>mba-advisor</code>.</p>
+        <p>Then check what it can actually see: <i>"Which folder are you working in, and what do
+          you see in it?"</i></p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It asked me to approve something</summary>
+      <div class="help__b">
+        <p>That's the permissions layer from setup doing its job. Read what it wants to write,
+          then approve it.</p>
+        <p>The warm-up asked you to stay in Manual throughout. Here, if you'd rather stop
+          approving every file, you can switch to Accept edits — but read the first two or three
+          before you do.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It says it can't read some of the files</summary>
+      <div class="help__b">
+        <p>Scanned PDFs are images, so there may be no text to read. That's a real limit and
+          worth noticing out loud — ask it to list those files as unreadable in the map rather
+          than guessing at their contents.</p>
+        <p>If <i>everything</i> is unreadable, you've probably opened the wrong folder. Ask:
+          <i>"Which folder are you working in, and what do you see in it?"</i></p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>The map is missing files, or invented ones</summary>
+      <div class="help__b">
+        <p>Say exactly what you counted: <i>"There are NN files in orientation-materials and your
+          map accounts for MM. List every file again, including subfolders, and rewrite the
+          map."</i></p>
+        <p>Invented entries are the more serious failure. If you see one, that's worth raising
+          your hand about — it's a live example of the thing this whole session is warning you
+          about.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It's summarizing everything at length and taking forever</summary>
+      <div class="help__b">
+        <p>Stop it: <i>"Too much detail. One line per file."</i> You want a map, not a digest —
+          the reading happens later, when a real question needs it.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>Next</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 2 · PROFILE -->
+<section class="step" data-rail="Teach it who you are">
+  <div class="step__head">
+    <span class="step__num dots" data-num="5.2"></span>
+    <div>
+      <p class="step__eyebrow label">Step 2 of 5</p>
+      <h1 class="step__title">Teach it who you are</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">Same move as the warm-up: let it interview you rather than drafting a
+      perfect profile from scratch. The correction pass at the end is the real point — you
+      approve the profile before anything relies on it.</p>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Profile prompt</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Interview me one question at a time — no more than five — about:
+
+- career direction
+- skills I want to build
+- communities and experiences I value
+- time and scheduling constraints
+- tradeoffs I am willing to make
+
+Then summarize my answers in my-profile.md and ask me to correct it.</p>
+    </div>
+
+    <p>Paste it into the chat and press Enter. Answer one question at a time — rough answers are
+      fine. When it writes <code class="m">my-profile.md</code>, approve the edit, then read it
+      back and correct what's wrong. Correcting it is the step.</p>
+
+    <div class="note note--warn"><b>Privacy.</b> Only include what you're comfortable storing in
+      a folder on your laptop. Do not add financial, health, accessibility, immigration, or
+      identity information — none of it makes the advice better, and all of it makes the file
+      riskier.</div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="a2-file"><span class="check__box"></span>
+        <span class="check__t"><code class="m">my-profile.md</code> exists</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a2-read"><span class="check__box"></span>
+        <span class="check__t">I read it and corrected at least one thing
+          <small>There is almost always something — an emphasis it overstated, a constraint it softened.</small></span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>The profile sounds like a cover letter, not like me</summary>
+      <div class="help__b">
+        <p>Say so: <i>"This is too polished and too positive. Rewrite it plainly, including the
+          constraints and the things I said I'd give up."</i> A profile that only contains
+          ambitions produces advice that ignores your actual life.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I don't know my career direction yet</summary>
+      <div class="help__b">
+        <p>Say that — it's a real and useful answer. <i>"I'm genuinely undecided between two
+          directions; treat that uncertainty as a fact about me and don't resolve it for me."</i>
+          An advisor that knows you're exploring gives better advice than one guessing you're
+          sure.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It asked all five questions at once</summary>
+      <div class="help__b">
+        <p><i>"One at a time, please. Wait for my answer before the next question."</i> The
+          one-at-a-time constraint exists because your third answer changes what the fourth
+          question should be.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I'm behind. What can I skip?</summary>
+      <div class="help__b">
+        <p>Nothing outright — each step's boxes have to be ticked before the next one opens.
+          But two things can be done lightly: the correction pass on <code>my-profile.md</code>
+          can be one line rather than a careful edit, and <code>test-log.md</code> can be three
+          lines.</p>
+        <p>Do the source map, the rules file, and step 5 properly. Those are the exercise. An
+          advisor with a thin profile still teaches you something; an advisor you never tested
+          teaches you nothing.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>Next</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 3 · RULES -->
+<section class="step" data-rail="Write the rules">
+  <div class="step__head">
+    <span class="step__num dots" data-num="5.3"></span>
+    <div>
+      <p class="step__eyebrow label">Step 3 of 5</p>
+      <h1 class="step__title">Write the rules</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">Behaviour design, written down — inspectable, and revisable when a
+      test fails. Ask Claude to save these six lines as <code class="m">advisor-start.md</code>
+      — you never type the file yourself. Approve the write when Claude asks.</p>
+
+    <h2 class="sec">The six rules</h2>
+    <ol class="dos">
+      <li><b>Answer the decision — don't just summarize documents.</b> <span class="qual q1">Direct</span></li>
+      <li><b>Use my-profile.md to personalize the recommendation.</b> <span class="qual q2">Personal</span></li>
+      <li><b>Cite the supporting file and section when possible.</b> <span class="qual q3">Traceable</span></li>
+      <li><b>Separate official facts from your judgment.</b> <span class="qual q3">Traceable</span></li>
+      <li><b>Say when the materials do not support an answer.</b> <span class="qual q4">Honest</span></li>
+      <li><b>Ask a follow-up when missing info would change the advice.</b> <span class="qual q4">Honest</span></li>
+    </ol>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Create the rules file</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Create advisor-start.md containing exactly these rules:
+
+1. Answer the decision — don't just summarize documents.
+2. Use my-profile.md to personalize the recommendation.
+3. Cite the supporting file and section when possible.
+4. Separate official facts from your judgment.
+5. Say when the materials do not support an answer.
+6. Ask a follow-up when missing info would change the advice.</p>
+    </div>
+
+    <div class="note"><b>These four colours follow you through the rest of the session.</b>
+      They're the same four qualities you'll grade the answers against, and the same four you'll
+      come back and strengthen when a test fails.</div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="a3-file"><span class="check__box"></span>
+        <span class="check__t"><code class="m">advisor-start.md</code> is saved in the workspace</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a3-own"><span class="check__box"></span>
+        <span class="check__t">I've added or changed at least one rule to suit me
+          <small>Just say it in the chat — <i>"Add a seventh rule to advisor-start.md: be blunt, no encouraging preamble."</i> You never have to edit the file by hand. Keep the grounding and uncertainty rules, though — those are the ones that matter.</small></span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>What should I add?</summary>
+      <div class="help__b">
+        <p>Things you actually want. <i>"Be blunt — no encouraging preamble."</i> <i>"Always give
+          me a second option I might not have considered."</i> <i>"Keep answers under 200 words
+          unless I ask for more."</i> Rules about how it talks to you are as legitimate as rules
+          about evidence.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Isn't this just a prompt? Why a file?</summary>
+      <div class="help__b">
+        <p>Because a file survives the conversation. Next session you'll open this folder, and
+          the rules will still be there — along with the profile, the map, and the test log. That
+          persistence is what makes this a workspace instead of a chat.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>Next</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 4 · START -->
+<section class="step" data-rail="Start the advisor">
+  <div class="step__head">
+    <span class="step__num dots" data-num="5.4"></span>
+    <div>
+      <p class="step__eyebrow label">Step 4 of 5</p>
+      <h1 class="step__title">Start the advisor</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">Three files, one instruction, and the thing wakes up knowing the
+      packet and knowing you.</p>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Start the advisor</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Act as my personal Sloan MBA advisor for this session. First read source-map.md, my-profile.md, and the rules in advisor-start.md. Use the files in orientation-materials as the source of truth for factual claims about Sloan. If any of those three files is missing, tell me which one before you start.
+
+Help me make decisions, not just find passages. For every recommendation: answer directly, explain why it fits my profile, cite the source file and section, and label judgment and uncertainty. If the materials do not support an answer, say so.
+
+Begin by telling me what kinds of decisions you can help with, based on the sources you found.</p>
+    </div>
+
+    <h2 class="sec">Four behaviours to watch for in its first reply</h2>
+    <div class="quals">
+      <span class="qual q1">Answer</span>
+      <span class="qual q2">Personalize</span>
+      <span class="qual q3">Cite</span>
+      <span class="qual q4">Admit uncertainty</span>
+    </div>
+
+    <div class="note" style="margin-top:26px"><b>Change the tone and priorities freely — keep
+      the grounding and uncertainty rules.</b> If you want a blunter advisor, or one that leads
+      with tradeoffs, say so. What shouldn't change is that claims trace to sources and gaps get
+      admitted.</div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="a4-running"><span class="check__box"></span>
+        <span class="check__t">It told me what kinds of decisions it can help with</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a4-real"><span class="check__box"></span>
+        <span class="check__t">I asked one real question I actually care about
+          <small>Not a test question. A real one. That's how you find out whether this is useful.</small></span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>It says one of the three files is missing</summary>
+      <div class="help__b">
+        <p>You can still run it. Say: <i>"Start anyway without that file, and tell me what you'll
+          be missing because of it."</i> A missing <code>my-profile.md</code> costs you
+          personalization; a missing <code>source-map.md</code> costs you citations. If it's
+          <code>advisor-start.md</code>, go back to step 3 — that one is the exercise.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It's summarizing documents instead of answering</summary>
+      <div class="help__b">
+        <p>The most common failure, and rule 1 exists for it. Push back in the moment —
+          <i>"You summarized. What should I actually do, and why that rather than the
+          alternative?"</i> — then, in step 5, strengthen the rule so you don't have to keep
+          saying it.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It isn't citing anything</summary>
+      <div class="help__b">
+        <p><i>"For every factual claim, name the file and section it came from. If you can't, say
+          that it's your judgment rather than something in the materials."</i></p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>It forgot the rules halfway through</summary>
+      <div class="help__b">
+        <p>Long conversations drift. <i>"Re-read advisor-start.md and apply it to your last
+          answer."</i> If it keeps drifting, that's information: your rules may be too many or
+          too vague to hold onto.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>Next</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 5 · TEST -->
+<section class="step" data-rail="Find out what you built">
+  <div class="step__head">
+    <span class="step__num dots" data-num="5.5"></span>
+    <div>
+      <p class="step__eyebrow label">Step 5 of 5</p>
+      <h1 class="step__title">Now find out<br>what you actually built</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">Three real jobs, one impossible question. Different jobs stress
+      different rules — and the impossible one is the most informative of the four.</p>
+
+    <h2 class="sec">Ask one question from each row — then the fourth one</h2>
+    <div class="modes">
+      <div class="mode"><span class="mode__n">Plan</span>
+        <span class="mode__d">"Build a two-week onboarding plan around my goals and constraints."</span></div>
+      <div class="mode"><span class="mode__n">Choose</span>
+        <span class="mode__d">"Which three activities should I prioritize — and what should I drop?"</span></div>
+      <div class="mode"><span class="mode__n">Navigate</span>
+        <span class="mode__d">"I have a scheduling conflict between something required and something I've already committed to. What do the materials say, and whom do I contact?"</span></div>
+    </div>
+
+    <p style="margin:24px 0 0"><b>Grade every answer against the four:</b></p>
+    <div class="quals">
+      <span class="qual q1">Direct answer</span>
+      <span class="qual q2">Personal fit</span>
+      <span class="qual q3">Source trail</span>
+      <span class="qual q4">Uncertainty</span>
+    </div>
+
+    <div class="beat">
+      <p class="label" style="margin:0">The impossible question</p>
+      <p class="beat__q">"What's the deadline for the spring add/drop exception, and who signed off on that date?"</p>
+      <p style="margin:0 0 12px">You're hoping for "I can't verify that from the supplied
+        materials." <b>That's a pass, not a failure.</b> A good refusal names what's missing,
+        points you to the right office or person, and does not invent.</p>
+      <p style="margin:0;font-size:14.5px;color:rgba(201,200,199,.85)">Try one: a date next
+        spring · a policy exception · a situation the packet never covers.</p>
+    </div>
+
+    <h2 class="sec">When a test fails, revise the rule — not just the answer</h2>
+    <p style="max-width:60ch">A failure is information about your rules. Diagnose the pattern,
+      then patch the pattern.</p>
+    <div class="modes">
+      <div class="mode"><span class="mode__n">Too generic</span>
+        <span class="mode__d">Strengthen the profile requirement.</span></div>
+      <div class="mode"><span class="mode__n">No source trail</span>
+        <span class="mode__d">Strengthen the citation rule.</span></div>
+      <div class="mode"><span class="mode__n">Overconfident</span>
+        <span class="mode__d">Strengthen the uncertainty rule.</span></div>
+      <div class="mode"><span class="mode__n">All summary</span>
+        <span class="mode__d">Require a decision and a next action.</span></div>
+    </div>
+    <p style="margin-top:20px"><b>Then, in this order:</b> change the rule in
+      <code class="m">advisor-start.md</code>, ask the same question again, and log both
+      answers.</p>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Log the tests</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Create test-log.md. For each question I asked: the question, which of the four qualities the answer missed, the rule I changed, and what changed when I asked again.
+
+One short block per question.</p>
+    </div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="a5-three"><span class="check__box"></span>
+        <span class="check__t">I ran all three jobs and graded the answers</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a5-impossible"><span class="check__box"></span>
+        <span class="check__t">I asked something the packet can't answer — and I saw what it did
+          <small>If it invented an answer instead, that's the most important thing you'll learn today. Say so in the debrief.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a5-revised"><span class="check__box"></span>
+        <span class="check__t">I revised one rule and reran the test</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="a5-log"><span class="check__box"></span>
+        <span class="check__t"><code class="m">test-log.md</code> records what worked, what failed, and what I changed</span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>It answered the impossible question confidently</summary>
+      <div class="help__b">
+        <p>You've just produced the session's central exhibit: fluent, specific, plausible, with
+          nothing underneath it. Strengthen rule 5, rerun the same question, and note both
+          results in <code>test-log.md</code>. Then tell the room.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Every answer is good. Am I doing it wrong?</summary>
+      <div class="help__b">
+        <p>Push harder. Ask about something genuinely contested, or about a deadline that isn't
+          in the packet, or ask it to choose between two things it has no basis to compare. An
+          advisor that never says "I don't know" hasn't been asked anything hard enough.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I'm out of time</summary>
+      <div class="help__b">
+        <p>Do the impossible question. If you only run one test today, run that one — it's the
+          one that tells you whether anything else it said can be trusted.</p>
+        <p>Keep the log to three lines — one per question you asked. That is enough to tick
+          it.</p>
+      </div>
+    </details>
+
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn btn--red" data-next>I tested it</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== DONE -->
+<section class="done">
+  <span class="done__num dots" data-num="05"></span>
+  <h1 class="done__t">Rung three. And you know its limits.</h1>
+  <p class="done__p">You built an agent that works across a folder of evidence, grounded it in
+    official sources, taught it your priorities, wrote its rules down where you can inspect
+    them, and then went looking for where it breaks. The last part is the part most people
+    skip.</p>
+  <p class="done__p"><b>Bring both folders back next session.</b> They're the starting point for
+    publishing, connecting, and making this reusable.</p>
+
+  <div class="ladder">
+    <div class="rung rung--lit"><div class="rung__n">1</div>
+      <div class="rung__slab">Describe</div><div class="rung__c">ask for an answer</div></div>
+    <div class="rung" data-rung="build"><div class="rung__n">2</div>
+      <div class="rung__slab">Build</div><div class="rung__c">one file, yours</div></div>
+    <div class="rung rung--now"><div class="rung__n">3</div>
+      <div class="rung__slab">Advise</div><div class="rung__c">a folder of evidence</div></div>
+    <div class="rung rung--next"><div class="rung__n">4</div>
+      <div class="rung__slab">Connect</div><div class="rung__c">next session</div></div>
+  </div>
+
+  <div class="dashed" style="max-width:52ch;margin-left:0">
+    <b>Two questions left open</b>
+    How does the page become visible to recruiters?<br>
+    How does the advisor become reusable, connected, and current?
+  </div>
+
+  <p class="motto">Build quickly. Inspect carefully.<br>Increase agency deliberately.</p>
+
+  <div class="nav">
+    <a class="btn btn--ghost" href="index.html">All guides</a>
+    <button class="btn btn--ghost" data-restart>Review the steps</button>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="colophon">
+  <a href="index.html">All guides</a>
+  <span class="colophon__spacer"></span>
+  <span>Progress is saved in this browser only — not your account. Not your laptop? Start over first.</span>
+  <button class="btn-reset">Start over</button>
+</footer>
+
+<script>window.TRACK = { id: "advisor", rung: "advise",
+  hintTail: " — tick them as you go" };</script>
+<script src="assets/alt.js"></script>
+<script>if(!window.__ALT_OK)document.documentElement.className=document.documentElement.className.replace(/(^|\s)js(\s|$)/," ")</script>
+</body>
+</html>
