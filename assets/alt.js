@@ -172,7 +172,7 @@
   var nowEl = document.querySelector(".rail__now");
   var current = 0;
 
-  /* The label a step shows the student — "3.2" is section 3, step 2 — or null
+  /* The label a step shows the student — "4.2" is section 4, step 2 — or null
      for the unnumbered preflight. The big numeral, the rail, the readout and
      #step- all derive from these, so the numbering systems agree. */
   function stepNum(i) {
@@ -192,7 +192,7 @@
   function stepLabel(i) {
     return stepNum(i) || (SECTION ? SECTION + ".0" : "0");
   }
-  // takes the label as shown ("3.2", "3.0") or a bare step number ("2", "0")
+  // takes the label as shown ("4.2", "4.0") or a bare step number ("2", "0")
   function indexOfNum(n) {
     var k = parseInt(String(n).split(".").pop(), 10);
     if (k === 0) return steps.length ? 0 : -1;
