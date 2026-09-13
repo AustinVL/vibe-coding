@@ -122,7 +122,7 @@
       <div class="mode"><span class="mode__n">1:00 left</span>
         <span class="mode__d">You've restarted the advisor chat and asked the same question.</span></div>
       <div class="mode"><span class="mode__n">0:00</span>
-        <span class="mode__d">What changed is in <code class="m">test-log.md</code>.</span>
+        <span class="mode__d">You've compared the two answers. What changed goes to the build chat — now, or after class.</span>
         <span class="mode__f">The point</span></div>
     </div>
 
@@ -157,10 +157,11 @@
     </div>
   </div>
   <div class="step__body">
-    <p class="step__lede">In the advisor chat. Three real jobs, one impossible question. Different
-      jobs stress different rules — and the impossible one is the most informative of the four.</p>
+    <p class="step__lede">In the advisor chat. Three real jobs, one impossible question. Different jobs stress
+      different rules — and the impossible one is the most informative of the four. The questions
+      below are examples: ask what you'd actually want to know.</p>
 
-<h2 class="sec">Ask one question from each row — then the fourth one</h2>
+<h2 class="sec">One question from each row — examples; use your own words</h2>
     <div class="modes">
       <div class="mode"><span class="mode__n">Plan</span>
         <span class="mode__d">"Build a two-week onboarding plan around my goals and constraints."</span></div>
@@ -175,8 +176,12 @@
       <span class="qual q1">Direct answer</span>
       <span class="qual q2">Personal fit</span>
       <span class="qual q3">Source trail</span>
-      <span class="qual q4">Uncertainty</span>
+            <span class="qual q4">Uncertainty</span>
     </div>
+
+    <div class="note"><b>"Failure" is wider than the four.</b> Anything that isn't what <i>you</i> want
+      from your advisor counts — too long, too hedged, not encouraging enough, the wrong tone. If
+      you'd want it different next time, it's a failure worth a rule.</div>
 
     <div class="beat">
       <p class="label" style="margin:0">The impossible question</p>
@@ -184,8 +189,7 @@
       <p style="margin:0 0 12px">You're hoping for "I can't verify that from the supplied
         materials." <b>That's a pass, not a failure.</b> A good refusal names what's missing,
         points you to the right office or person, and does not invent.</p>
-      <p style="margin:0;font-size:14.5px;color:rgba(201,200,199,.85)">Try one: a date next
-        spring · a policy exception · a situation the packet never covers.</p>
+      <p style="margin:0;font-size:14.5px;color:rgba(201,200,199,.85)">Two more to try: when Persuasive Presentation II is due in 15.280 · how many points you'd need to bid to get your preferred Negotiations section.</p>
     </div>
 
     <h2 class="sec">Done when</h2>
@@ -256,8 +260,10 @@
         <span class="mode__d">Strengthen the citation rule.</span></div>
       <div class="mode"><span class="mode__n">Overconfident</span>
         <span class="mode__d">Strengthen the uncertainty rule.</span></div>
-      <div class="mode"><span class="mode__n">All summary</span>
+            <div class="mode"><span class="mode__n">All summary</span>
         <span class="mode__d">Require a decision and a next action.</span></div>
+      <div class="mode"><span class="mode__n">Not your style</span>
+        <span class="mode__d">Add a rule about length, tone, or encouragement.</span></div>
     </div>
 
     <h2 class="sec">Then, in this order</h2>
@@ -265,9 +271,9 @@
       <li><b>Tell the build chat what went wrong</b>
         <small>One line: the question, and what the answer missed. It fixes the matching rule in <code class="m">advisor-start.md</code> and starts <code class="m">test-log.md</code> — it knows exactly what it changed, so it writes the entry.</small></li>
       <li><b>Restart the advisor chat</b>
-        <small>The running advisor read the rules when it started and won't see the edit. Close it, start a new chat in <code class="m">mba-advisor</code>, paste the start prompt again, then ask the same question — word for word. Grade it against the four.</small></li>
+        <small>The running advisor read the rules when it started and won't see the edit. Close it, start a new chat in <code class="m">mba-advisor</code>, and paste the restart prompt below — the start prompt with your question on the end, so it's one paste and no introduction. Grade the answer against the four.</small></li>
       <li><b>Close the loop in the build chat</b>
-        <small>Tell it what changed. It finishes the entry. That's the whole record: what you asked, what was wrong, what you changed, what happened.</small></li>
+        <small>One line — what changed — and it finishes the entry. If the clock's gone, do this after class: the entry already holds the rule change, which is the part that matters.</small></li>
     </ol>
 
     <div class="prompt">
@@ -275,19 +281,19 @@
         <span class="prompt__name">Diagnose and revise · build chat</span>
         <button class="btn-copy" type="button">Copy</button>
       </div>
-      <p class="prompt__body">I tested the advisor. The question: [paste it]. What went wrong with the answer: [it summarised instead of deciding / it ignored my profile / it cited nothing / it sounded sure about something the materials don't cover]. Strengthen the matching rule in advisor-start.md so this doesn't happen again — change nothing else, and show me the new wording. Then create test-log.md with one entry: the question, what the answer missed, and the rule you changed. Leave a line for what happens when I ask again.</p>
+      <p class="prompt__body">I tested the advisor. The question: [paste it]. What went wrong with the answer: [it summarised instead of deciding / it ignored my profile / it cited nothing / it sounded sure about something the materials don't cover / it was too long / the tone isn't what I want]. Strengthen (or add) the matching rule in advisor-start.md so this doesn't happen again — change nothing else, and show me the new wording. Then create test-log.md with one entry: the question, what the answer missed, and the rule you changed. Leave a line for what happens when I ask again.</p>
     </div>
 
     <div class="prompt">
       <div class="prompt__bar">
-        <span class="prompt__name">Start the advisor · advisor chat, again</span>
+        <span class="prompt__name">Restart the advisor · advisor chat</span>
         <button class="btn-copy" type="button">Copy</button>
       </div>
       <p class="prompt__body">Act as my personal Sloan MBA advisor for this session. First read source-map.md, my-profile.md, and the rules in advisor-start.md. Use the files in mba-materials as the source of truth for factual claims about Sloan. If any of those three files is missing, tell me which one before you start.
 
 Help me make decisions, not just find passages. For every recommendation: answer directly, explain why it fits my profile, cite the source file and section, and label judgment and uncertainty. If the materials do not support an answer, say so.
 
-Begin by telling me what kinds of decisions you can help with, based on the sources you found.</p>
+Skip the introduction. Answer this question: [paste the same question, word for word]</p>
     </div>
 
     <div class="prompt">
@@ -310,7 +316,7 @@ Begin by telling me what kinds of decisions you can help with, based on the sour
       </label></li>
       <li><label class="check">
         <input type="checkbox" data-check="t2-log"><span class="check__box"></span>
-        <span class="check__t"><code class="m">test-log.md</code> has the entry — including what changed</span>
+        <span class="check__t"><code class="m">test-log.md</code> has the entry — the rule change now, what changed when there's time</span>
       </label></li>
     </ul>
 
