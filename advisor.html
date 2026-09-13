@@ -89,8 +89,8 @@
       </label></li>
       <li><label class="check">
         <input type="checkbox" data-check="a-packet"><span class="check__box"></span>
-        <span class="check__t">I've downloaded the orientation packet
-          <small>Link below. Download it before class — step 1 shows you how to unzip it and where to put it.</small></span>
+        <span class="check__t">I've downloaded <code class="m">mba-materials</code> from Canvas
+          <small>A zip on the course Canvas site — location below. Download it before class; step 1 shows you how to unzip it and where to put it.</small></span>
       </label></li>
       <li><label class="check">
         <input type="checkbox" data-check="a-privacy"><span class="check__box"></span>
@@ -100,8 +100,8 @@
     </ul>
 
     <div class="dashed">
-      <b>Orientation packet</b>
-      &lt;packet name and download link — to be added&gt;<br>
+      <b>mba-materials.zip — on Canvas</b>
+      &lt;where on Canvas (module or page) — to be added&gt;<br>
       &lt;plus a line reading "Download before class — it's about N MB." — to be added&gt;
     </div>
 
@@ -165,7 +165,7 @@
     <h2 class="sec">What you're building</h2>
     <div class="tree">
       <div class="d">mba-advisor/ <span class="note">the workspace — bring it back next session</span></div>
-      <div><span class="i">├─ </span><span class="d">orientation-materials/</span> <span class="note">official source files, as supplied</span></div>
+      <div><span class="i">├─ </span><span class="d">mba-materials/</span> <span class="note">official source files, from Canvas</span></div>
       <div><span class="i">├─ </span><span class="f">source-map.md</span> <span class="note">what each source contains, when to use it</span></div>
       <div><span class="i">├─ </span><span class="f">my-profile.md</span> <span class="note">your goals, constraints, tradeoffs</span></div>
       <div><span class="i">├─ </span><span class="f">advisor-start.md</span> <span class="note">the rules that start the advisor</span></div>
@@ -176,8 +176,8 @@
     <ol class="dos">
       <li><b>Open <code class="m">mba-advisor</code> in Claude Code</b>
         <small>Same three moves as setup: open the Code tab, choose to open a project folder, and pick <code class="m">mba-advisor</code> — it's beside <code class="m">personal-site</code>. Your warm-up page is untouched; you can switch back the same way.</small></li>
-      <li><b>Put the packet folder inside it</b>
-        <small>Windows: right-click the .zip, choose <b>Extract All</b>, then Extract — don't drag files out of the preview window. Mac: double-click it. Then drag the <code class="m">orientation-materials</code> folder into <code class="m">mba-advisor</code>. If it lands under a different name, rename it to <code class="m">orientation-materials</code>.</small></li>
+      <li><b>Put <code class="m">mba-materials</code> inside it</b>
+        <small>Windows: right-click the .zip, choose <b>Extract All</b>, then Extract — don't drag files out of the preview window. Mac: double-click it. Then drag the <code class="m">mba-materials</code> folder into <code class="m">mba-advisor</code>. If it lands under a different name, rename it to <code class="m">mba-materials</code>.</small></li>
       <li><b>Ask Claude to inventory every file</b>
         <small>It will ask before writing anything — that's Manual mode from setup. Approve it.</small></li>
       <li><b>Ask it to write <code class="m">source-map.md</code></b>
@@ -198,7 +198,7 @@ Do not summarize the contents in detail yet, and do not include any file you cou
 
     <div class="note"><b>Quality check:</b> every file in the packet should appear in
       <code class="m">source-map.md</code> — either as a mapped entry or in the unreadable list.
-      <b>Count both.</b> Open <code class="m">orientation-materials</code> in Finder or File
+      <b>Count both.</b> Open <code class="m">mba-materials</code> in Finder or File
       Explorer and count what's there, including anything inside subfolders. A map that quietly
       skips three documents is worse than no map, because you'll trust it.</div>
 
@@ -206,7 +206,7 @@ Do not summarize the contents in detail yet, and do not include any file you cou
     <ul class="checks">
       <li><label class="check">
         <input type="checkbox" data-check="a1-placed"><span class="check__box"></span>
-        <span class="check__t">The packet folder is inside <code class="m">mba-advisor</code></span>
+        <span class="check__t"><code class="m">mba-materials</code> is inside <code class="m">mba-advisor</code></span>
       </label></li>
       <li><label class="check">
         <input type="checkbox" data-check="a1-map"><span class="check__box"></span>
@@ -258,7 +258,7 @@ Do not summarize the contents in detail yet, and do not include any file you cou
     <details class="help">
       <summary>The map is missing files, or invented ones</summary>
       <div class="help__b">
-        <p>Say exactly what you counted: <i>"There are NN files in orientation-materials and your
+        <p>Say exactly what you counted: <i>"There are NN files in mba-materials and your
           map accounts for MM. List every file again, including subfolders, and rewrite the
           map."</i></p>
         <p>Invented entries are the more serious failure. If you see one, that's worth raising
@@ -477,15 +477,22 @@ Then summarize my answers in my-profile.md and ask me to correct it.</p>
     </div>
   </div>
   <div class="step__body">
-    <p class="step__lede">Three files, one instruction, and the thing wakes up knowing the
-      packet and knowing you.</p>
+    <p class="step__lede">Three files, one instruction, and the thing wakes up knowing the packet and knowing you.</p>
+
+    <h2 class="sec">Do this</h2>
+    <ol class="dos">
+      <li><b>Start a new chat — still in <code class="m">mba-advisor</code></b>
+        <small>Look for the control that starts a new conversation, not the one that opens a folder. The build chat from steps 1 to 3 stays available; the advisor gets a clean one, so the only thing in its head is the three files it's about to read.</small></li>
+      <li><b>Paste the start prompt below</b>
+        <small>Then watch its first reply for the four behaviours.</small></li>
+    </ol>
 
     <div class="prompt">
       <div class="prompt__bar">
         <span class="prompt__name">Start the advisor</span>
         <button class="btn-copy" type="button">Copy</button>
       </div>
-      <p class="prompt__body">Act as my personal Sloan MBA advisor for this session. First read source-map.md, my-profile.md, and the rules in advisor-start.md. Use the files in orientation-materials as the source of truth for factual claims about Sloan. If any of those three files is missing, tell me which one before you start.
+      <p class="prompt__body">Act as my personal Sloan MBA advisor for this session. First read source-map.md, my-profile.md, and the rules in advisor-start.md. Use the files in mba-materials as the source of truth for factual claims about Sloan. If any of those three files is missing, tell me which one before you start.
 
 Help me make decisions, not just find passages. For every recommendation: answer directly, explain why it fits my profile, cite the source file and section, and label judgment and uncertainty. If the materials do not support an answer, say so.
 
@@ -507,6 +514,10 @@ Begin by telling me what kinds of decisions you can help with, based on the sour
 
     <h2 class="sec">Done when</h2>
     <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="a4-fresh"><span class="check__box"></span>
+        <span class="check__t">I started it in a fresh chat, not the build chat</span>
+      </label></li>
       <li><label class="check">
         <input type="checkbox" data-check="a4-running"><span class="check__box"></span>
         <span class="check__t">It told me what kinds of decisions it can help with</span>
@@ -587,7 +598,7 @@ Begin by telling me what kinds of decisions you can help with, based on the sour
       <div class="mode"><span class="mode__n">3:00 left</span>
         <span class="mode__d">You've fixed the rule in <code class="m">advisor-start.md</code>.</span></div>
       <div class="mode"><span class="mode__n">1:00 left</span>
-        <span class="mode__d">You've rerun the failing test.</span></div>
+        <span class="mode__d">You've rerun the failing test in a fresh advisor chat.</span></div>
       <div class="mode"><span class="mode__n">0:00</span>
         <span class="mode__d">What changed is recorded in <code class="m">test-log.md</code>.</span>
         <span class="mode__f">The point</span></div>
@@ -634,18 +645,32 @@ Begin by telling me what kinds of decisions you can help with, based on the sour
       <div class="mode"><span class="mode__n">All summary</span>
         <span class="mode__d">Require a decision and a next action.</span></div>
     </div>
-    <p style="margin-top:20px"><b>Then, in this order:</b> change the rule in
-      <code class="m">advisor-start.md</code>, ask the same question again, and log both
-      answers.</p>
+    <p style="margin-top:20px"><b>Then, in this order — it takes two chats.</b> The advisor read
+      the rules once, when it started; it won't notice an edit, and a rerun only counts if it
+      meets the new rules fresh.</p>
+    <ol class="dos">
+      <li><b>Fix the rule in the build chat</b>
+        <small>Switch to the chat from steps 1 to 3 — or start another new one; any chat that isn't playing the advisor. Say which rule, and what the failure taught you.</small></li>
+      <li><b>Rerun the test in a fresh advisor chat</b>
+        <small>Start a new chat in <code class="m">mba-advisor</code>, paste the start prompt from step 4 again, then ask the same question, word for word. Grade it against the four.</small></li>
+      <li><b>Log it in that same fresh chat</b>
+        <small>It has the rerun answer in front of it and can read the rules. The one thing only you know is which quality the first answer missed — fill that in.</small></li>
+    </ol>
 
     <div class="prompt">
       <div class="prompt__bar">
-        <span class="prompt__name">Log the tests</span>
+        <span class="prompt__name">Fix the rule · build chat</span>
         <button class="btn-copy" type="button">Copy</button>
       </div>
-      <p class="prompt__body">Create test-log.md. For each question I asked: the question, which of the four qualities the answer missed, the rule I changed, and what changed when I asked again.
+      <p class="prompt__body">In advisor-start.md, strengthen the rule about [citations / uncertainty / personal fit / giving a decision] so that [what the failure taught you]. Change nothing else, and show me the new wording.</p>
+    </div>
 
-One short block per question.</p>
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Log the test · fresh advisor chat</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Step out of the advisor role for a moment. Add an entry to test-log.md (create it if it doesn't exist): the question I just asked; the quality the earlier answer missed: [direct answer / personal fit / source trail / uncertainty]; the rule that changed in advisor-start.md (read the file); and what your answer just did differently. One short block, then go back to being the advisor.</p>
     </div>
 
     <h2 class="sec">Done when</h2>
@@ -661,7 +686,7 @@ One short block per question.</p>
       </label></li>
       <li><label class="check">
         <input type="checkbox" data-check="a5-revised"><span class="check__box"></span>
-        <span class="check__t">I revised one rule and reran the test</span>
+        <span class="check__t">I revised one rule and reran the test in a fresh advisor chat</span>
       </label></li>
       <li><label class="check">
         <input type="checkbox" data-check="a5-log"><span class="check__box"></span>
