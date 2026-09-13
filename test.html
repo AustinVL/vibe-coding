@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test your advisor · Vibe Coding</title>
+<meta name="description" content="Three real jobs, one impossible question, and the limits that remain.">
+<link rel="stylesheet" href="assets/alt.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<script>document.documentElement.className+=" js"</script>
+</head>
+<body>
+
+<div class="intro">
+  <div class="intro__sweep"></div>
+  <div class="intro__inner">
+    <p class="intro__eyebrow label">Chapter 3 · Section 07 · On the clock</p>
+    <span class="intro__num dots" data-num="07"></span>
+    <h1 class="intro__title"><span>Test it,</span><span>know its limits</span></h1>
+    <div class="intro__rule"></div>
+    <p class="intro__meta label">Three real jobs · one impossible question · the limits that remain</p>
+    <div class="intro__go"><button class="btn">Begin</button></div>
+  </div>
+  <button class="intro__skip">Skip</button>
+</div>
+
+<aside class="rail">
+  <a href="index.html" style="line-height:0">
+    <img class="rail__tag" src="assets/tag.png"
+         alt="AI Foundations"></a>
+  <a class="rail__chapter" href="index.html">
+    <span class="label">Chapter 3</span>
+    <span class="rail__chapter-t">Vibe Coding</span></a>
+  <!-- the collapsed bar under 1080px names the page instead -->
+  <p class="rail__sec label">Section 07</p>
+  <p class="rail__track">Test it, <br>know its limits</p>
+
+  <p class="rail__now"></p>
+
+  <nav class="rail__nav" aria-label="Guides">
+    <ul class="rail__guides">
+      <li class="rail__guide" data-guide="setup">
+        <a class="rail__g" href="setup.html"><span class="rail__n">02</span><span class="rail__gl">Set up your machine</span></a>
+      </li>
+      <li class="rail__guide" data-guide="warmup">
+        <a class="rail__g" href="warmup.html"><span class="rail__n">04</span><span class="rail__gl">Build your page</span></a>
+      </li>
+      <li class="rail__guide" data-guide="advisor">
+        <a class="rail__g" href="advisor.html"><span class="rail__n">06</span><span class="rail__gl">Build your MBA advisor</span></a>
+      </li>
+      <li class="rail__guide is-current" data-guide="test">
+        <a class="rail__g" href="test.html" aria-current="page"><span class="rail__n">07</span><span class="rail__gl">Test it, know its limits</span></a>
+        <ul class="rail__index"></ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="rail__foot">
+    <p class="rail__stuck">Stuck? Raise your hand.</p>
+    <div class="meter" role="progressbar" aria-label="Progress"
+         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="meter__fill"></div></div>
+    <div class="rail__read">
+      <span data-read-step>STEP 7.0</span><span data-read-pct>0%</span>
+    </div>
+  </div>
+</aside>
+
+<main class="sheet">
+<div class="col">
+
+<!-- ====================================================== 0 · PREFLIGHT -->
+<section class="step" data-rail="Before you begin">
+  <div class="step__head">
+    <div></div>
+    <div>
+      <p class="step__eyebrow label">Before you begin</p>
+      <h1 class="step__title">Two chats,<br>two jobs</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">You built the advisor in one chat and started it in another, and those
+      two keep their jobs for the whole test. The <b>build chat</b> — the one from the advisor
+      guide's steps 1 to 3 — edits files and keeps the log. The <b>advisor chat</b> — the one you
+      started in step 4 — answers questions and does nothing else. You carry the verdicts between
+      them; that judgment is the exercise.</p>
+
+    <h2 class="sec">Check</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="t-advisor"><span class="check__box"></span>
+        <span class="check__t">The advisor chat is open and has introduced itself
+          <small>If it hasn't, go back to step 4 of the advisor guide and start it.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="t-build"><span class="check__box"></span>
+        <span class="check__t">The build chat is still open — or I know I can start another
+          <small>Nothing is lost if it's gone: the files are on disk. Any new chat in <code class="m">mba-advisor</code> that isn't playing the advisor can be the build chat.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="t-grade"><span class="check__box"></span>
+        <span class="check__t">I'm here to grade it, not to admire it
+          <small>Fluent is not evidence. Every answer gets checked against the same four things.</small></span>
+      </label></li>
+    </ul>
+
+    <div class="note"><b>Twelve minutes on the clock.</b> The countdown on the screen at the front
+      is the clock every milestone below refers to. Protect the last third — the rerun is the
+      point.</div>
+
+    <h2 class="sec">Pace yourself against the clock</h2>
+    <p>Time left on the room timer — not the time of day.</p>
+    <div class="modes">
+      <div class="mode"><span class="mode__n">9:00 left</span>
+        <span class="mode__d">You've tried all three jobs and graded the answers.</span></div>
+      <div class="mode"><span class="mode__n">7:00 left</span>
+        <span class="mode__d">You've asked the impossible question.</span></div>
+      <div class="mode"><span class="mode__n">5:00 left</span>
+        <span class="mode__d">You've told the build chat what went wrong.</span></div>
+      <div class="mode"><span class="mode__n">3:00 left</span>
+        <span class="mode__d"><code class="m">advisor-start.md</code> is fixed and <code class="m">test-log.md</code> has its first entry.</span></div>
+      <div class="mode"><span class="mode__n">1:00 left</span>
+        <span class="mode__d">You've restarted the advisor chat and asked the same question.</span></div>
+      <div class="mode"><span class="mode__n">0:00</span>
+        <span class="mode__d">What changed is in <code class="m">test-log.md</code>.</span>
+        <span class="mode__f">The point</span></div>
+    </div>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>I closed the build chat, or it's lost the thread</summary>
+      <div class="help__b">
+        <p>Start a new chat in <code class="m">mba-advisor</code> and treat it as the build chat. It can read every file you made, which is the whole reason the rules live in a file and not in a conversation.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I only have one chat open</summary>
+      <div class="help__b">
+        <p>Then it's the advisor chat. Start a second one for the build work when step 2 asks for it — don't ask the advisor to edit its own rules mid-conversation. It read them once, at the start, and a rule changed under it is a test you can't read.</p>
+      </div>
+    </details>
+    <div class="nav">
+      <button class="btn" data-next>Start</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 1 · TEST -->
+<section class="step" data-rail="Three jobs, one impossible question">
+  <div class="step__head">
+    <span class="step__num dots" data-num="7.1"></span>
+    <div>
+      <p class="step__eyebrow label">Step 1 of 2</p>
+      <h1 class="step__title">Now find out<br>what you actually built</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">In the advisor chat. Three real jobs, one impossible question. Different
+      jobs stress different rules — and the impossible one is the most informative of the four.</p>
+
+<h2 class="sec">Ask one question from each row — then the fourth one</h2>
+    <div class="modes">
+      <div class="mode"><span class="mode__n">Plan</span>
+        <span class="mode__d">"Build a two-week onboarding plan around my goals and constraints."</span></div>
+      <div class="mode"><span class="mode__n">Choose</span>
+        <span class="mode__d">"Which three activities should I prioritize — and what should I drop?"</span></div>
+      <div class="mode"><span class="mode__n">Navigate</span>
+        <span class="mode__d">"I have a scheduling conflict between something required and something I've already committed to. What do the materials say, and whom do I contact?"</span></div>
+    </div>
+
+    <p style="margin:24px 0 0"><b>Grade every answer against the four:</b></p>
+    <div class="quals">
+      <span class="qual q1">Direct answer</span>
+      <span class="qual q2">Personal fit</span>
+      <span class="qual q3">Source trail</span>
+      <span class="qual q4">Uncertainty</span>
+    </div>
+
+    <div class="beat">
+      <p class="label" style="margin:0">The impossible question</p>
+      <p class="beat__q">"What's the deadline for the spring add/drop exception, and who signed off on that date?"</p>
+      <p style="margin:0 0 12px">You're hoping for "I can't verify that from the supplied
+        materials." <b>That's a pass, not a failure.</b> A good refusal names what's missing,
+        points you to the right office or person, and does not invent.</p>
+      <p style="margin:0;font-size:14.5px;color:rgba(201,200,199,.85)">Try one: a date next
+        spring · a policy exception · a situation the packet never covers.</p>
+    </div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="t1-three"><span class="check__box"></span>
+        <span class="check__t">I ran all three jobs and graded the answers</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="t1-impossible"><span class="check__box"></span>
+        <span class="check__t">I asked something the packet can't answer — and I saw what it did
+          <small>If it invented an answer instead, that's the most important thing you'll learn today. Say so in the debrief.</small></span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="t1-pick"><span class="check__box"></span>
+        <span class="check__t">I've picked the one failure I'll fix
+          <small>The worst miss, not the first one. One rule, one rerun — that's what fits in the clock.</small></span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>It answered the impossible question confidently</summary>
+      <div class="help__b">
+        <p>You've just produced the session's central exhibit: fluent, specific, plausible, with nothing underneath it. That's your failure for step 2 — the uncertainty rule. Then tell the room.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>Every answer is good. Am I doing it wrong?</summary>
+      <div class="help__b">
+        <p>Push harder. Ask about something genuinely contested, or about a deadline that isn't in the packet, or ask it to choose between two things it has no basis to compare. An advisor that never says "I don't know" hasn't been asked anything hard enough.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I'm out of time</summary>
+      <div class="help__b">
+        <p>Do the impossible question. If you only run one test today, run that one — it's the one that tells you whether anything else it said can be trusted.</p>
+      </div>
+    </details>
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn" data-next>I've graded it</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 2 · REVISE -->
+<section class="step" data-rail="Revise the rule">
+  <div class="step__head">
+    <span class="step__num dots" data-num="7.2"></span>
+    <div>
+      <p class="step__eyebrow label">Step 2 of 2</p>
+      <h1 class="step__title">Revise the rule,<br>not just the answer</h1>
+    </div>
+  </div>
+  <div class="step__body">
+    <p class="step__lede">A failure is information about your rules. Diagnose the pattern, then
+      patch the pattern — and let the chats keep their jobs: the build chat edits and logs, the
+      advisor chat answers.</p>
+
+<h2 class="sec">Match the failure to the rule</h2>
+    <div class="modes">
+      <div class="mode"><span class="mode__n">Too generic</span>
+        <span class="mode__d">Strengthen the profile requirement.</span></div>
+      <div class="mode"><span class="mode__n">No source trail</span>
+        <span class="mode__d">Strengthen the citation rule.</span></div>
+      <div class="mode"><span class="mode__n">Overconfident</span>
+        <span class="mode__d">Strengthen the uncertainty rule.</span></div>
+      <div class="mode"><span class="mode__n">All summary</span>
+        <span class="mode__d">Require a decision and a next action.</span></div>
+    </div>
+
+    <h2 class="sec">Then, in this order</h2>
+    <ol class="dos">
+      <li><b>Tell the build chat what went wrong</b>
+        <small>One line: the question, and what the answer missed. It fixes the matching rule in <code class="m">advisor-start.md</code> and starts <code class="m">test-log.md</code> — it knows exactly what it changed, so it writes the entry.</small></li>
+      <li><b>Restart the advisor chat</b>
+        <small>The running advisor read the rules when it started and won't see the edit. Close it, start a new chat in <code class="m">mba-advisor</code>, paste the start prompt again, then ask the same question — word for word. Grade it against the four.</small></li>
+      <li><b>Close the loop in the build chat</b>
+        <small>Tell it what changed. It finishes the entry. That's the whole record: what you asked, what was wrong, what you changed, what happened.</small></li>
+    </ol>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Diagnose and revise · build chat</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">I tested the advisor. The question: [paste it]. What went wrong with the answer: [it summarised instead of deciding / it ignored my profile / it cited nothing / it sounded sure about something the materials don't cover]. Strengthen the matching rule in advisor-start.md so this doesn't happen again — change nothing else, and show me the new wording. Then create test-log.md with one entry: the question, what the answer missed, and the rule you changed. Leave a line for what happens when I ask again.</p>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Start the advisor · advisor chat, again</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Act as my personal Sloan MBA advisor for this session. First read source-map.md, my-profile.md, and the rules in advisor-start.md. Use the files in mba-materials as the source of truth for factual claims about Sloan. If any of those three files is missing, tell me which one before you start.
+
+Help me make decisions, not just find passages. For every recommendation: answer directly, explain why it fits my profile, cite the source file and section, and label judgment and uncertainty. If the materials do not support an answer, say so.
+
+Begin by telling me what kinds of decisions you can help with, based on the sources you found.</p>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Close the loop · build chat</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">I asked the advisor the same question in a new chat. This time: [better — it cited two sources and gave a decision / the same failure / worse]. Finish the entry in test-log.md with that.</p>
+    </div>
+
+    <h2 class="sec">Done when</h2>
+    <ul class="checks">
+      <li><label class="check">
+        <input type="checkbox" data-check="t2-told"><span class="check__box"></span>
+        <span class="check__t">I told the build chat what went wrong, and it changed one rule</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="t2-rerun"><span class="check__box"></span>
+        <span class="check__t">I restarted the advisor chat and asked the same question</span>
+      </label></li>
+      <li><label class="check">
+        <input type="checkbox" data-check="t2-log"><span class="check__box"></span>
+        <span class="check__t"><code class="m">test-log.md</code> has the entry — including what changed</span>
+      </label></li>
+    </ul>
+
+    <h2 class="sec">If something's wrong</h2>
+    <details class="help">
+      <summary>The rerun is no better</summary>
+      <div class="help__b">
+        <p>Also information. Ask the build chat to show you the rule it wrote — a rule that's too vague to act on is the usual cause. Sharpen it once more; if there's no clock left, log "no change" and say why. A logged failure is worth more than an unlogged fix.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I asked the advisor to fix its own rules</summary>
+      <div class="help__b">
+        <p>It can, but you've lost the test: an advisor that edits its rules mid-conversation is answering with the old ones in its head. Keep the roles — build chat edits, advisor chat answers — and restart the advisor after any edit.</p>
+      </div>
+    </details>
+    <details class="help">
+      <summary>I'm out of time</summary>
+      <div class="help__b">
+        <p>Do the diagnose-and-revise prompt and stop there. One entry in <code>test-log.md</code> with the rule you changed is enough to tick it; the rerun can happen after class.</p>
+      </div>
+    </details>
+    <div class="nav">
+      <button class="btn btn--ghost" data-back>Back</button>
+      <button class="btn btn--red" data-next>I tested it</button>
+      <span class="nav__spacer"></span>
+      <span class="nav__hint" data-hint></span>
+    </div>
+  </div>
+</section>
+
+<section class="done">
+  <span class="done__num dots" data-num="07"></span>
+  <h1 class="done__t">It works. And you know its limits.</h1>
+  <p class="done__p">You built an agent that works across a folder of evidence, grounded it in
+    official sources, taught it your priorities, wrote its rules down where you can inspect
+    them, and then went looking for where it breaks. The last part is the part most people
+    skip.</p>
+  <p class="done__p"><b>Bring both folders back next session.</b> They're the starting point for
+    publishing, connecting, and making this reusable.</p>
+
+
+  <div class="dashed" style="max-width:52ch;margin-left:0">
+    <b>Two questions left open</b>
+    How does the page become visible to recruiters?<br>
+    How does the advisor become reusable, connected, and current?
+  </div>
+
+  <p class="motto">Build quickly. Inspect carefully.<br>Increase agency deliberately.</p>
+
+  <div class="nav">
+    <a class="btn btn--ghost" href="index.html">All guides</a>
+    <button class="btn btn--ghost" data-restart>Review the steps</button>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="colophon">
+  <a href="index.html">All guides</a>
+  <span class="colophon__spacer"></span>
+  <span>Progress is saved in this browser only — not your account. Not your laptop? Start over first.</span>
+  <button class="btn-reset">Start over</button>
+</footer>
+
+<script>window.TRACK = { id: "test",
+  hintTail: " — tick them as you go" };</script>
+<script src="assets/alt.js"></script>
+<script>if(!window.__ALT_OK)document.documentElement.className=document.documentElement.className.replace(/(^|\s)js(\s|$)/," ")</script>
+</body>
+</html>
