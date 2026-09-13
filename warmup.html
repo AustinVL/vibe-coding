@@ -79,8 +79,12 @@
     </div>
   </div>
   <div class="step__body">
-    <p class="step__lede">You're about to direct an agent to make something real. Check these
-      first — they take a moment and they prevent the two most common stalls.</p>
+    <p class="step__lede">One file called <code class="m">index.html</code>, in your
+      <code class="m">personal-site</code> folder — that's the whole deliverable, and it's small on
+      purpose. A good version introduces you clearly, shows <i>selected</i> work, gives a recruiter
+      one next action, works at laptop and phone widths, and contains nothing private. No framework,
+      no account, no deployment — putting it on the internet is next session. Check these first;
+      they prevent the two most common stalls.</p>
 
     <h2 class="sec">Check</h2>
     <ul class="checks">
@@ -112,6 +116,22 @@
     <div class="note"><b>Fourteen minutes on the clock.</b> The countdown on the screen at the front is the clock every milestone on this page refers to. That's deliberately not enough time
       to perfect it. Finishing something small and clear beats starting something ambitious.</div>
 
+    <h2 class="sec">Pace yourself against the clock</h2>
+    <p>Time left on the room timer — not the time of day.</p>
+    <div class="modes">
+            <div class="mode"><span class="mode__n">12:00 left</span>
+        <span class="mode__d">The interview is over, the brief is approved and the build has started.</span></div>
+      <div class="mode"><span class="mode__n">8:00 left</span>
+        <span class="mode__d">A first version is open in your browser.</span></div>
+      <div class="mode"><span class="mode__n">5:00 left</span>
+        <span class="mode__d">You've checked the story, the visuals and the links.</span></div>
+      <div class="mode"><span class="mode__n">2:00 left</span>
+        <span class="mode__d">You've made one specific revision.</span>
+        <span class="mode__f">The point</span></div>
+      <div class="mode"><span class="mode__n">0:00</span>
+        <span class="mode__d">Stop building — the stranger test is called from the front.</span></div>
+    </div>
+
     <div class="nav">
       <button class="btn" data-next>Start</button>
       <span class="nav__spacer"></span>
@@ -120,61 +140,12 @@
   </div>
 </section>
 
-<!-- ====================================================== 1 · DELIVERABLE -->
-<section class="step" data-rail="Know what you're making">
+<!-- ====================================================== 1 · INTERVIEW -->
+<section class="step" data-rail="Let Claude interview you">
   <div class="step__head">
     <span class="step__num dots" data-num="4.1"></span>
     <div>
-      <p class="step__eyebrow label">Step 1 of 4</p>
-      <h1 class="step__title">Know what you're making</h1>
-    </div>
-  </div>
-  <div class="step__body">
-    <p class="step__lede">One file called <code class="m">index.html</code>, sitting in your
-      <code class="m">personal-site</code> folder. That's the whole deliverable. It replaces the
-      hello page you made in setup — that one has done its job. It's small on purpose — the
-      attention belongs on directing and judging, not on technology.</p>
-
-    <h2 class="sec">A good version does five things</h2>
-    <ol class="dos">
-      <li><b>Introduces you clearly</b>
-        <small>A stranger knows who you are within five seconds.</small></li>
-      <li><b>Shows selected experience or work</b>
-        <small>Selected. Not everything you have ever done.</small></li>
-      <li><b>Gives a recruiter a next action</b>
-        <small>Email, LinkedIn, a calendar link — one obvious thing to do next.</small></li>
-      <li><b>Works at laptop and phone widths</b>
-        <small>Narrow your browser window to check. Most people will see it small.</small></li>
-      <li><b>Contains nothing private or sensitive</b>
-        <small>No phone number, no address, nothing you'd regret being public.</small></li>
-    </ol>
-
-    <div class="dashed"><b>No framework. No account. No deployment — yet.</b>
-      Putting it on the internet is next session.</div>
-
-    <h2 class="sec">Done when</h2>
-    <ul class="checks">
-      <li><label class="check">
-        <input type="checkbox" data-check="w1-read"><span class="check__box"></span>
-        <span class="check__t">I've read the five criteria and know which one I'm most likely to skip</span>
-      </label></li>
-    </ul>
-
-    <div class="nav">
-      <button class="btn btn--ghost" data-back>Back</button>
-      <button class="btn" data-next>Next</button>
-      <span class="nav__spacer"></span>
-      <span class="nav__hint" data-hint></span>
-    </div>
-  </div>
-</section>
-
-<!-- ====================================================== 2 · INTERVIEW -->
-<section class="step" data-rail="Let Claude interview you">
-  <div class="step__head">
-    <span class="step__num dots" data-num="4.2"></span>
-    <div>
-      <p class="step__eyebrow label">Step 2 of 4</p>
+      <p class="step__eyebrow label">Step 1 of 2</p>
       <h1 class="step__title">Let Claude interview you<br>before it builds</h1>
     </div>
   </div>
@@ -290,12 +261,12 @@ After approval: create or replace index.html in this folder. Tell me when it's w
   </div>
 </section>
 
-<!-- ====================================================== 3 · PASSES -->
+<!-- ====================================================== 2 · PASSES -->
 <section class="step" data-rail="Build in three passes">
   <div class="step__head">
-    <span class="step__num dots" data-num="4.3"></span>
+    <span class="step__num dots" data-num="4.2"></span>
     <div>
-      <p class="step__eyebrow label">Step 3 of 4</p>
+      <p class="step__eyebrow label">Step 2 of 2</p>
       <h1 class="step__title">Build in three passes</h1>
     </div>
   </div>
@@ -310,8 +281,36 @@ After approval: create or replace index.html in this folder. Tell me when it's w
       <li><b>Direction — type, colour, layout</b>
         <small>Ask yourself: does it feel like me?</small></li>
       <li><b>Polish — links, widths, wording</b>
-        <small>Ask yourself: does everything actually work?</small></li>
+                <small>Ask yourself: does everything actually work?</small></li>
     </ol>
+
+    <h2 class="sec">If a pass doesn't pass — example prompts</h2>
+    <p>One fix per message, and say what to protect. These are examples: describe what
+      <i>you</i> saw on <i>your</i> page.</p>
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Content didn't pass · example</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">A stranger can't tell what I do or why it matters. Rewrite the opening so the first two lines say who I am and the one thing I want to be remembered for. Keep the sections and the design exactly as they are.</p>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Direction didn't pass · example</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">It doesn't feel like me — it reads corporate and generic. Change only the type, the colours and the spacing to something warmer and simpler, two colours at most. Don't touch the words or the section order.</p>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt__bar">
+        <span class="prompt__name">Polish didn't pass · example</span>
+        <button class="btn-copy" type="button">Copy</button>
+      </div>
+      <p class="prompt__body">Two things don't work: the LinkedIn link goes nowhere, and at phone width the name overlaps the photo. Fix those two only, then tell me what you changed. Everything else stays as it is.</p>
+    </div>
+
 
     <div class="note"><b>Stay in Manual today.</b> Setup left you approving every edit, and on a
       build this short the clicking is the point: you see each change before it lands, which is
@@ -319,21 +318,6 @@ After approval: create or replace index.html in this folder. Tell me when it's w
       decision you make on evidence, deliberately — and you haven't collected much evidence
       yet.</div>
 
-    <h2 class="sec">Pace yourself against the clock</h2>
-    <p>Time left on the room timer — not the time of day.</p>
-    <div class="modes">
-            <div class="mode"><span class="mode__n">12:00 left</span>
-        <span class="mode__d">The interview is over, the brief is approved and the build has started.</span></div>
-      <div class="mode"><span class="mode__n">8:00 left</span>
-        <span class="mode__d">A first version is open in your browser.</span></div>
-      <div class="mode"><span class="mode__n">5:00 left</span>
-        <span class="mode__d">You've checked the story, the visuals and the links.</span></div>
-      <div class="mode"><span class="mode__n">2:00 left</span>
-        <span class="mode__d">You've made one specific revision.</span>
-        <span class="mode__f">The point</span></div>
-      <div class="mode"><span class="mode__n">0:00</span>
-        <span class="mode__d">Stop building — bring whatever you have to the stranger test.</span></div>
-    </div>
 
     <div class="note note--warn"><b>Stuck? Show us your screen — don't start over.</b> Starting
       over throws away the brief, which is the expensive part. A helper can usually unstick a
@@ -345,7 +329,7 @@ After approval: create or replace index.html in this folder. Tell me when it's w
         <input type="checkbox" data-check="w3-content"><span class="check__box"></span>
         <span class="check__t">Pass 1 is done — my page says who I am, shows some selected work,
           and gives one way to contact me
-          <small>Criteria 1, 2 and 3 from step 1. If any of the three is missing, you're still in
+          <small>The first three of the five things a good version does. If any of the three is missing, you're still in
             pass 1 — don't start pass 2.</small></span>
       </label></li>
       <li><label class="check">
@@ -375,7 +359,7 @@ After approval: create or replace index.html in this folder. Tell me when it's w
     <details class="help">
       <summary>I've run out of things to ask for</summary>
       <div class="help__b">
-        <p>Try the stranger test early (step 4), or ask Claude: <i>"What's the weakest part of
+        <p>Ask Claude: <i>"What's the weakest part of
           this page for a recruiter who has eight seconds?"</i> Then fix that one thing.</p>
       </div>
     </details>
@@ -385,95 +369,13 @@ After approval: create or replace index.html in this folder. Tell me when it's w
         <p>Stop building. When the swap is called, the four questions are on the screen at the
           front — trade laptops and bring whatever you have. A half-finished page that a real
           person has read beats a better page nobody has seen.</p>
-        <p>Step 4 opens here once both boxes above are ticked, so come back to it afterwards;
-          the folder isn't going anywhere.</p>
+        <p>The folder isn't going anywhere — you can keep going after class.</p>
       </div>
     </details>
 
     <div class="nav">
       <button class="btn btn--ghost" data-back>Back</button>
       <button class="btn" data-next>Next</button>
-      <span class="nav__spacer"></span>
-      <span class="nav__hint" data-hint></span>
-    </div>
-  </div>
-</section>
-
-<!-- ====================================================== 4 · STRANGER -->
-<section class="step" data-rail="Test it like a stranger">
-  <div class="step__head">
-    <span class="step__num dots" data-num="4.4"></span>
-    <div>
-      <p class="step__eyebrow label">Step 4 of 4</p>
-      <h1 class="step__title">Test it like a stranger,<br>then save it</h1>
-    </div>
-  </div>
-  <div class="step__body">
-    <p class="step__lede">This part is called from the front and sits outside the fourteen minutes — when the build clock runs out, stop where you are and bring whatever you have.
-      Trade laptops with a neighbour. Ninety seconds each way — you are a
-      recruiter who has never met this person.</p>
-
-    <h2 class="sec">Four questions, asked out loud</h2>
-    <ol class="dos">
-      <li><b>Who is this person?</b></li>
-      <li><b>What should I remember about them?</b></li>
-      <li><b>What can I click — and does it work?</b></li>
-      <li><b>What breaks when I narrow the window?</b></li>
-    </ol>
-
-    <div class="note"><b>Then make one correction — not a redesign.</b> Take the single most
-      important thing the stranger saw that you didn't, and fix that. Two minutes.</div>
-
-    <h2 class="sec">Done when</h2>
-    <ul class="checks">
-      <li><label class="check">
-        <input type="checkbox" data-check="w4-swap"><span class="check__box"></span>
-        <span class="check__t">Someone else looked at my page and answered the four questions</span>
-      </label></li>
-      <li><label class="check">
-        <input type="checkbox" data-check="w4-fix"><span class="check__box"></span>
-        <span class="check__t">I made one correction based on what they said</span>
-      </label></li>
-      <li><label class="check">
-        <input type="checkbox" data-check="w4-survives"><span class="check__box"></span>
-        <span class="check__t">I opened <code class="m">index.html</code> from my folder —
-          double-clicked it in Finder or File Explorer — and it still looks right
-          <small>Not from inside Claude. The file has to work on its own, in a browser, straight
-            from the folder.</small></span>
-      </label></li>
-    </ul>
-
-    <h2 class="sec">If something's wrong</h2>
-    <details class="help">
-      <summary>It looks broken when I reopen the file</summary>
-      <div class="help__b">
-        <p>Usually it's pulling something from the internet, or from another file that isn't
-          there. Tell Claude: <i>"Make index.html completely self-contained — no external
-          stylesheets, scripts, fonts, or images. Everything must be inside the one file so it
-          works opened straight from my folder. Keep my email and LinkedIn links exactly as they
-          are."</i></p>
-      </div>
-    </details>
-    <details class="help">
-      <summary>My neighbour couldn't tell what I do</summary>
-      <div class="help__b">
-        <p>That's the most valuable result you can get here, and it's a content problem rather
-          than a design one. Rewrite the first two lines so they answer "who are you and what are
-          you for" before anything decorative.</p>
-      </div>
-    </details>
-    <details class="help">
-      <summary>Nobody near me is finished</summary>
-      <div class="help__b">
-        <p>Swap anyway with whatever state you're both in — half-built pages give better feedback
-          than finished ones, because the gaps are still visible. Or grab a helper and use them
-          as your stranger.</p>
-      </div>
-    </details>
-
-    <div class="nav">
-      <button class="btn btn--ghost" data-back>Back</button>
-      <button class="btn btn--red" data-next>I built it</button>
       <span class="nav__spacer"></span>
       <span class="nav__hint" data-hint></span>
     </div>
